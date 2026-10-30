@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Berkah Grosir - Sembako Lengkap</title>
+<title>Warung Madura Berkah - Lengkap Murah</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
     :root {
-        --primary: #2e7d32;
-        --secondary: #ffb300;
-        --accent: #d32f2f;
-        --bg: #f4f7f6;
+        --primary: #d84315; 
+        --secondary: #ffb300; 
+        --accent: #2e7d32; 
+        --bg: #fbf8f1;
         --text: #1e293b;
         --card-bg: #ffffff;
     }
@@ -49,7 +49,7 @@
     }
 
     .logo {
-        font-size: 20px;
+        font-size: 18px;
         font-weight: 800;
         color: var(--primary);
         display: flex;
@@ -57,7 +57,7 @@
         gap: 8px;
     }
 
-    .logo span { color: var(--secondary); }
+    .logo span { color: var(--text); }
 
     .cart-btn {
         background: var(--primary);
@@ -72,14 +72,14 @@
         align-items: center;
         gap: 8px;
         transition: 0.3s;
-        box-shadow: 0 8px 15px rgba(46, 125, 50, 0.3);
+        box-shadow: 0 8px 15px rgba(216, 67, 21, 0.3);
     }
 
-    .cart-btn:hover { transform: scale(1.05); background: #1b5e20; }
+    .cart-btn:hover { transform: scale(1.05); background: #bf360c; }
 
     .cart-badge {
-        background: var(--accent);
-        color: white;
+        background: var(--secondary);
+        color: var(--text);
         border-radius: 50%;
         padding: 2px 8px;
         font-size: 12px;
@@ -102,13 +102,13 @@
         animation: fadeUp 0.8s ease-out;
     }
 
-    @media (min-width: 768px) { .hero-banner { height: 350px; } }
+    @media (min-width: 768px) { .hero-banner { height: 320px; } }
 
     .hero-banner::before {
         content: '';
         position: absolute;
         top: 0; left: 0; width: 100%; height: 100%;
-        background: linear-gradient(to right, rgba(27,94,32,0.85), rgba(0,0,0,0.6));
+        background: linear-gradient(to right, rgba(216,67,21,0.85), rgba(0,0,0,0.6));
     }
 
     .hero-content {
@@ -125,14 +125,14 @@
         text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     }
 
-    @media (min-width: 768px) { .hero-content h1 { font-size: 40px; } }
+    @media (min-width: 768px) { .hero-content h1 { font-size: 38px; } }
 
     .hero-content p { font-size: 14px; font-weight: 500; margin-bottom: 15px; }
 
     .hero-badge {
         display: inline-block;
         background: var(--secondary);
-        color: #1b5e20;
+        color: var(--text);
         padding: 8px 20px;
         border-radius: 50px;
         font-weight: 800;
@@ -166,7 +166,7 @@
 
     .categories {
         display: flex; gap: 10px; overflow-x: auto; padding: 0 20px 20px;
-        max-width: 800px; margin: 0 auto; scrollbar-width: none;
+        max-width: 1000px; margin: 0 auto; scrollbar-width: none;
         animation: fadeUp 0.8s ease-out 0.3s both;
     }
     .categories::-webkit-scrollbar { display: none; }
@@ -179,7 +179,7 @@
 
     .cat-btn.active {
         background: var(--primary); color: white; border-color: var(--primary);
-        box-shadow: 0 6px 15px rgba(46,125,50,0.3);
+        box-shadow: 0 6px 15px rgba(216,67,21,0.3);
     }
 
     /* CONTAINER */
@@ -212,29 +212,36 @@
         position: absolute; top: 15px; left: 15px; padding: 5px 12px;
         border-radius: 20px; font-size: 10px; font-weight: 800; color: white; z-index: 2;
     }
-    .badge.bestseller { background: var(--primary); }
-    .badge.promo { background: var(--accent); }
+    .badge.bestseller { background: var(--accent); }
+    .badge.promo { background: var(--primary); }
 
     /* GAMBAR PRODUK */
     .img-container {
-        height: 150px; display: flex; align-items: center; justify-content: center;
+        height: 140px; display: flex; align-items: center; justify-content: center;
         margin-bottom: 10px; position: relative; background: #f8fafc; border-radius: 15px;
         overflow: hidden;
     }
 
-    @media (min-width: 768px) { .img-container { height: 200px; } }
+    @media (min-width: 768px) { .img-container { height: 180px; } }
 
     .img-container img {
         width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;
     }
 
     .product-card:hover .img-container img { transform: scale(1.1); }
+    
+    /* Fallback Emoji jika gambar error */
+    .img-fallback {
+        font-size: 60px; display: flex; align-items: center; justify-content: center;
+        height: 100%; width: 100%; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.15));
+    }
+    @media (min-width: 768px) { .img-fallback { font-size: 80px; } }
 
     /* INFO PRODUK */
     .product-info { display: flex; flex-direction: column; flex-grow: 1; }
 
     .product-info h3 {
-        font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 5px; line-height: 1.3;
+        font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.3;
         display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
     }
 
@@ -265,10 +272,8 @@
         font-size: 10px; color: #64748b; margin-top: 2px; font-weight: 500;
     }
 
-    .satuan { font-size: 11px; color: #94a3b8; display: block; font-weight: 500; }
-
     .add-btn {
-        background: #e8f5e9; color: var(--primary); border: none; padding: 10px;
+        background: #fff3e0; color: var(--primary); border: none; padding: 10px;
         border-radius: 12px; font-weight: 700; font-size: 13px; cursor: pointer;
         transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 5px; width: 100%;
     }
@@ -316,7 +321,7 @@
         display: flex; align-items: center; gap: 10px;
     }
     .shipping-info.success {
-        background: #e8f5e9; border-color: #c8e6c9; color: var(--primary);
+        background: #e8f5e9; border-color: #c8e6c9; color: var(--accent);
     }
 
     /* ITEM KERANJANG */
@@ -325,8 +330,9 @@
         border-radius: 15px; margin-bottom: 15px; border: 1px solid #f1f5f9; align-items: center;
     }
 
-    .cart-item img {
+    .cart-item .cart-img {
         width: 50px; height: 50px; object-fit: cover; border-radius: 8px; background: #f8fafc;
+        display: flex; align-items: center; justify-content: center; font-size: 30px;
     }
 
     .cart-item-info { flex: 1; }
@@ -393,7 +399,7 @@
 <body>
 
 <header>
-    <div class="logo">🛒 BERKAH<span>GROSIR</span></div>
+    <div class="logo">🏪 WARUNG<span>MADURA</span></div>
     <button class="cart-btn" onclick="openCart()">
         🛒 <span class="cart-badge" id="cartCount">0</span>
     </button>
@@ -401,8 +407,8 @@
 
 <section class="hero-banner">
     <div class="hero-content">
-        <h1>Sembako Murah<br>Lengkap & Terpercaya</h1>
-        <p>Belanja kebutuhan dapur jadi lebih hemat</p>
+        <h1>Warung Madura Berkah<br>Serba Ada, Harga Bersahabat</h1>
+        <p>Belanja kebutuhan harian tanpa keluar rumah</p>
         <div class="hero-badge">🚚 GRATIS ONGKIR MIN. 5 BARANG</div>
     </div>
 </section>
@@ -410,478 +416,18 @@
 <div class="search-container">
     <div class="search-box">
         <span>🔍</span>
-        <input type="text" id="searchInput" placeholder="Cari beras, minyak, telur..." oninput="renderProducts()">
+        <input type="text" id="searchInput" placeholder="Cari beras, mie, sabun, rokok..." oninput="renderProducts()">
     </div>
 </div>
 
 <div class="categories" id="categoryList">
     <button class="cat-btn active" onclick="filterCategory('semua', this)">Semua Barang</button>
-    <button class="cat-btn" onclick="filterCategory('beras', this)">Beras & Tepung</button>
-    <button class="cat-btn" onclick="filterCategory('minyak', this)">Minyak & Gula</button>
-    <button class="cat-btn" onclick="filterCategory('telur', this)">Telur & Susu</button>
-    <button class="cat-btn" onclick="filterCategory('mie', this)">Mie & Kopi</button>
-</div>
-
-<div class="container">
-    <div class="products" id="productList"></div>
-</div>
-
-<!-- MODAL KERANJANG -->
-<div class="modal-overlay" id="cartModal">
-    <div class="modal">
-        <div class="modal-header">
-            <h2>🛒 Keranjang Grosir</h2>
-            <button class="close-btn" onclick="closeCart()">✕</button>
-        </div>
-        <div class="modal-body">
-            <div id="shippingBanner"></div>
-            <div id="cartItems"></div>
-            
-            <div id="orderForm" class="checkout-section" style="display:none;">
-                <h3 style="font-size:14px; margin-bottom:15px; color:var(--text);">Detail Pengiriman</h3>
-                <div class="form-group">
-                    <label>Nama Penerima</label>
-                    <input type="text" id="customerName" placeholder="Masukkan nama lengkap">
-                </div>
-                <div class="form-group">
-                    <label>No. WhatsApp</label>
-                    <input type="tel" id="customerPhone" placeholder="Contoh: 08123456789">
-                </div>
-                <div class="form-group">
-                    <label>Alamat Lengkap</label>
-                    <textarea id="customerAddress" rows="2" placeholder="Nama jalan, RT/RW, kelurahan, kecamatan"></textarea>
-                </div>
-                <div class="form-group">
-                    <label>Catatan (Opsional)</label>
-                    <input type="text" id="customerNote" placeholder="Contoh: Beras jangan yang keras">
-                </div>
-            </div>
-        </div>
-        
-        <div class="modal-footer" id="modalFooter" style="display:none;">
-            <div class="cart-total">
-                <span>Total Harga:</span>
-                <span id="totalPrice">Rp 0</span>
-            </div>
-            <button class="checkout-btn" onclick="checkoutWA()">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                Pesan via WhatsApp
-            </button>
-        </div>
-    </div>
-</div>
-
-<div class="toast" id="toast">Berhasil!</div>
-
-<footer>
-    <p>&copy; 2024 Berkah Grosir. All rights reserved.</p>
-</footer>
-
-<script>
-// ================= KONFIGURASI =================
-const WHATSAPP_NUMBER = "6285772590983"; 
-const MIN_FREE_SHIPPING = 5; // Minimal total barang (qty) untuk gratis ongkir
-
-// ================= DATA PRODUK SEMBAKO (ECERAN & GROSIR) =================
-const products = [
-    { 
-        id: 1, 
-        name: "Beras Pandan Wangi", 
-        desc: "Beras pulen wangi khas Pandan Wangi.",
-        category: "beras",
-        badge: "bestseller",
-        // Data Eceran
-        eceran: { price: 15000, unit: "1 kg", img: "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=500&auto=format&fit=crop" },
-        // Data Grosir
-        grosir: { price: 72000, unit: "Karung 5 kg", img: "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=500&auto=format&fit=crop" }
-    },
-    { 
-        id: 2, 
-        name: "Minyak Goreng Sania", 
-        desc: "Minyak goreng kemasan pouch jernih & hemat.",
-        category: "minyak",
-        badge: "promo",
-        eceran: { price: 18000, unit: "Pouch 1L", img: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?q=80&w=500&auto=format&fit=crop" },
-        grosir: { price: 34000, unit: "Pouch 2L", img: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?q=80&w=500&auto=format&fit=crop" }
-    },
-    { 
-        id: 3, 
-        name: "Gula Pasir Gulaku", 
-        desc: "Gula tebu murni premium higienis.",
-        category: "minyak",
-        eceran: { price: 8500, unit: "Sachet 250g", img: "https://images.unsplash.com/photo-1581609043483-1c4c442b47d6?q=80&w=500&auto=format&fit=crop" },
-        grosir: { price: 16500, unit: "Bungkus 1kg", img: "https://images.unsplash.com/photo-1581609043483-1c4c442b47d6?q=80&w=500&auto=format&fit=crop" }
-    },
-    { 
-        id: 4, 
-        name: "Telur Ayam Negeri", 
-        desc: "Telur segar kualitas super (isi ±16 butir/kg).",
-        category: "telur",
-        badge: "bestseller",
-        eceran: { price: 2500, unit: "1 butir", img: "https://images.unsplash.com/photo-1506976785307-8732e854ad03?q=80&w=500&auto=format&fit=crop" },
-        grosir: { price: 28000, unit: "Tray / 1 kg", img: "https://images.unsplash.com/photo-1506976785307-8732e854ad03?q=80&w=500&auto=format&fit=crop" }
-    },
-    { 
-        id: 5, 
-        name: "Indomie Goreng", 
-        desc: "Mie instan goreng rasa Original mantap.",
-        category: "mie",
-        badge: "promo",
-        eceran: { price: 3200, unit: "1 Bungkus", img: "https://images.unsplash.com/photo-1612927601601-6638404737ce?q=80&w=500&auto=format&fit=crop" },
-        grosir: { price: 118000, unit: "1 Dus (40 pcs)", img: "https://images.unsplash.com/photo-1612927601601-6638404737ce?q=80&w=500&auto=format&fit=crop" }
-    },
-    { 
-        id: 6, 
-        name: "Tepung Terigu Segitiga Biru", 
-        desc: "Tepung serbaguna untuk gorengan & kue.",
-        category: "beras",
-        eceran: { price: 4000, unit: "Sachet 500g", img: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=500&auto=format&fit=crop" },
-        grosir: { price: 13500, unit: "Bungkus 1kg", img: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=500&auto=format&fit=crop" }
-    },
-    { 
-        id: 7, 
-        name: "Susu Ultra Milk", 
-        desc: "Susu UHT Full Cream segar berkualitas.",
-        category: "telur",
-        badge: "new",
-        eceran: { price: 6000, unit: "1 Kotak 250ml", img: "https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=500&auto=format&fit=crop" },
-        grosir: { price: 210000, unit: "Karton (12x1L)", img: "https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=500&auto=format&fit=crop" }
-    },
-    { 
-        id: 8, 
-        name: "Kopi Kapal Api Special", 
-        desc: "Kopi bubuk robusta mantap pengusir ngantuk.",
-        category: "mie",
-        eceran: { price: 2000, unit: "Sachet", img: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=500&auto=format&fit=crop" },
-        grosir: { price: 14000, unit: "Bungkus 165g", img: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=500&auto=format&fit=crop" }
-    },
-];
-
-let cart = JSON.parse(localStorage.getItem('grosirCartV2')) || [];
-let currentCategory = 'semua';
-
-// ================= RENDER PRODUK =================
-function renderProducts() {
-    const list = document.getElementById('productList');
-    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
-    
-    const filtered = products.filter(p => {
-        const matchSearch = p.name.toLowerCase().includes(searchTerm);
-        const matchCat = currentCategory === 'semua' || p.category === currentCategory;
-        return matchSearch && matchCat;
-    });
-
-    if (filtered.length === 0) {
-        list.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding:40px; color:#94a3b8;">Barang tidak ditemukan 😔</div>`;
-        return;
-    }
-
-    list.innerHTML = filtered.map((p, index) => {
-        let badgeHtml = '';
-        if (p.badge === 'bestseller') badgeHtml = '<div class="badge bestseller">🔥 TERLARIS</div>';
-        if (p.badge === 'promo') badgeHtml = '<div class="badge promo">⚡ PROMO</div>';
-        if (p.badge === 'new') badgeHtml = '<div class="badge new" style="background:#0288d1">✨ BARU</div>';
-
-        // Emoji fallback jika gambar error
-        let fallbackEmoji = '📦';
-        if (p.category === 'beras') fallbackEmoji = '🍚';
-        if (p.category === 'minyak') fallbackEmoji = '🛢️';
-        if (p.category === 'telur') fallbackEmoji = '🥚';
-        if (p.category === 'mie') fallbackEmoji = '🍜';
-
-        return `
-        <div class="product-card" style="animation-delay: ${index * 0.05}s">
-            ${badgeHtml}
-            <div class="img-container" id="img-container-${p.id}">
-                <!-- Gambar akan di-render via JS -->
-            </div>
-            <div class="product-info">
-                <h3>${p.name}</h3>
-                <p class="desc">${p.desc}</p>
-                
-                <!-- TOMBOL TOGGLE ECERAN / GROSIR -->
-                <div class="variant-toggle">
-                    <button class="variant-btn active" id="btn-eceran-${p.id}" onclick="switchVariant(${p.id}, 'eceran')">Eceran</button>
-                    <button class="variant-btn" id="btn-grosir-${p.id}" onclick="switchVariant(${p.id}, 'grosir')">Grosir</button>
-                </div>
-
-                <div class="price-row" id="price-row-${p.id}">
-                    <!-- Harga akan di-render via JS -->
-                </div>
-                <button class="add-btn" onclick="addToCart(${p.id})">
-                    <span>+</span> Tambah
-                </button>
-            </div>
-        </div>
-        `;
-    }).join('');
-
-    // Set default state ke Eceran setelah render
-    filtered.forEach(p => switchVariant(p.id, 'eceran'));
-}
-
-// ================= LOGIKA TOGGLE VARIAN =================
-function switchVariant(id, type) {
-    const product = products.find(p => p.id === id);
-    if (!product) return;
-
-    // Update tombol
-    document.getElementById(`btn-eceran-${id}`).classList.toggle('active', type === 'eceran');
-    document.getElementById(`btn-grosir-${id}`).classList.toggle('active', type === 'grosir');
-
-    // Ambil data sesuai tipe
-    const data = type === 'eceran' ? product.eceran : product.grosir;
-
-    // Update Gambar
-    const imgContainer = document.getElementById(`img-container-${id}`);
-    imgContainer.innerHTML = `<img src="${data.img}" alt="${product.name}" loading="lazy" 
-        onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\\'font-size:50px;\\'>${product.category === 'beras' ? '🍚' : product.category === 'minyak' ? '🛢️' : product.category === 'telur' ? '🥚' : '🍜'}</span>';">`;
-
-    // Update Harga
-    const priceRow = document.getElementById(`price-row-${id}`);
-    priceRow.innerHTML = `
-        <span class="price">Rp ${data.price.toLocaleString('id-ID')}</span>
-        <span class="price-detail">Per ${data.unit}</span>
-    `;
-
-    // Simpan state tipe varian yang dipilih ke dalam DOM (buat dipake pas addToCart)
-    document.querySelector(`#btn-eceran-${id}`).closest('.product-card').dataset.selectedVariant = type;
-}
-
-// ================= FILTER KATEGORI =================
-function filterCategory(cat, btn) {
-    currentCategory = cat;
-    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    renderProducts();
-}
-
-// ================= LOGIKA KERANJANG =================
-function addToCart(id) {
-    const product = products.find(p => p.id === id);
-    const card = document.querySelector(`#btn-eceran-${id}`).closest('.product-card');
-    const selectedVariant = card.dataset.selectedVariant || 'eceran';
-    
-    // Ambil data sesuai varian yang dipilih
-    const variantData = product[selectedVariant];
-    
-    // ID unik di keranjang berdasarkan ID produk + varian (misal: 1-eceran)
-    const cartItemId = `${product.id}-${selectedVariant}`;
-
-    const existing = cart.find(item => item.cartItemId === cartItemId);
-
-    if (existing) {
-        existing.qty += 1;
-    } else {
-        cart.push({ 
-            cartItemId: cartItemId,
-            id: product.id,
-            name: product.name,
-            variant: selectedVariant,
-            unit: variantData.unit,
-            price: variantData.price,
-            img: variantData.img,
-            qty: 1 
-        });
-    }
-
-    saveCart();
-    updateCartCount();
-    
-    const labelVariant = selectedVariant === 'eceran' ? 'Eceran' : 'Grosir';
-    showToast(`✅ ${product.name} (${labelVariant}) masuk keranjang!`);
-}
-
-function saveCart() {
-    localStorage.setItem('grosirCartV2', JSON.stringify(cart));
-}
-
-function updateCartCount() {
-    const count = cart.reduce((sum, item) => sum + item.qty, 0);
-    const badge = document.getElementById('cartCount');
-    badge.textContent = count;
-    badge.style.transform = 'scale(1.5)';
-    setTimeout(() => badge.style.transform = 'scale(1)', 200);
-}
-
-function renderCart() {
-    const cartItems = document.getElementById('cartItems');
-    const orderForm = document.getElementById('orderForm');
-    const modalFooter = document.getElementById('modalFooter');
-    const totalPriceEl = document.getElementById('totalPrice');
-    const shippingBanner = document.getElementById('shippingBanner');
-
-    if (cart.length === 0) {
-        cartItems.innerHTML = `
-            <div class="empty-cart">
-                <div style="font-size:50px; margin-bottom:10px;">🛒</div>
-                <h3>Keranjang masih kosong</h3>
-                <p style="font-size:12px; margin-top:5px;">Yuk pilih sembako murah!</p>
-            </div>
-        `;
-        orderForm.style.display = 'none';
-        modalFooter.style.display = 'none';
-        shippingBanner.innerHTML = '';
-        return;
-    }
-
-    // Hitung total QTY untuk syarat gratis ongkir
-    const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
-    
-    // Logika Banner Gratis Ongkir
-    if (totalQty >= MIN_FREE_SHIPPING) {
-        shippingBanner.innerHTML = `
-            <div class="shipping-info success">
-                <span>🚚</span> Selamat! Pesanan Anda dapat <b>GRATIS ONGKIR</b>.
-            </div>
-        `;
-    } else {
-        const sisa = MIN_FREE_SHIPPING - totalQty;
-        shippingBanner.innerHTML = `
-            <div class="shipping-info">
-                <span>🛍️</span> Beli <b>${sisa} barang lagi</b> untuk dapat GRATIS ONGKIR!
-            </div>
-        `;
-    }
-
-    cartItems.innerHTML = cart.map(item => {
-        let fallbackEmoji = '📦';
-        if (item.name.includes('Beras')) fallbackEmoji = '🍚';
-        if (item.name.includes('Minyak')) fallbackEmoji = '🛢️';
-        if (item.name.includes('Telur')) fallbackEmoji = '🥚';
-        if (item.name.includes('Indomie')) fallbackEmoji = '🍜';
-
-        return `
-        <div class="cart-item">
-            <img src="${item.img}" alt="${item.name}" onerror="this.src='https://via.placeholder.com/50?text=${fallbackEmoji}'">
-            <div class="cart-item-info">
-                <h4>${item.name}</h4>
-                <span class="variant-label">${item.variant === 'eceran' ? 'Eceran' : 'Grosir'} - ${item.unit}</span>
-                <div class="item-price">Rp ${item.price.toLocaleString('id-ID')}</div>
-            </div>
-            <div class="qty-controls">
-                <button class="qty-btn" onclick="changeQty('${item.cartItemId}', -1)">−</button>
-                <span class="qty-num">${item.qty}</span>
-                <button class="qty-btn" onclick="changeQty('${item.cartItemId}', 1)">+</button>
-            </div>
-        </div>
-        `;
-    }).join('');
-
-    orderForm.style.display = 'block';
-    modalFooter.style.display = 'block';
-
-    const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-    totalPriceEl.textContent = `Rp ${total.toLocaleString('id-ID')}`;
-}
-
-function changeQty(cartItemId, delta) {
-    const item = cart.find(i => i.cartItemId === cartItemId);
-    if (!item) return;
-
-    item.qty += delta;
-    if (item.qty <= 0) {
-        cart = cart.filter(i => i.cartItemId !== cartItemId);
-    }
-    saveCart();
-    updateCartCount();
-    renderCart();
-}
-
-// ================= MODAL CONTROL =================
-function openCart() {
-    document.getElementById('cartModal').classList.add('active');
-    document.body.style.overflow = 'hidden';
-    renderCart();
-}
-
-function closeCart() {
-    document.getElementById('cartModal').classList.remove('active');
-    document.body.style.overflow = 'auto';
-}
-
-document.getElementById('cartModal').addEventListener('click', (e) => {
-    if (e.target.id === 'cartModal') closeCart();
-});
-
-// ================= CHECKOUT WHATSAPP =================
-function checkoutWA() {
-    const name = document.getElementById('customerName').value.trim();
-    const phone = document.getElementById('customerPhone').value.trim();
-    const address = document.getElementById('customerAddress').value.trim();
-    const note = document.getElementById('customerNote').value.trim();
-
-    if (!name || !phone || !address) {
-        showToast('⚠️ Lengkapi Nama, WA, dan Alamat!');
-        return;
-    }
-
-    const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-    const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
-    const orderId = 'BG-' + Date.now().toString().slice(-6);
-    const date = new Date().toLocaleString('id-ID', { dateStyle: 'long', timeStyle: 'short' });
-
-    let message = `*🛒 PESANAN BARU - BERKAH GROSIR*%0A`;
-    message += `━━━━━━━━━━━━━━━━━━━━%0A`;
-    message += `*Order ID:* ${orderId}%0A`;
-    message += `*Tanggal:* ${date}%0A`;
-    message += `━━━━━━━━━━━━━━━━━━━━%0A`;
-    message += `*📋 DATA PEMBELI:*%0A`;
-    message += `• Nama: ${name}%0A`;
-    message += `• No. WA: ${phone}%0A`;
-    message += `• Alamat: ${address}%0A`;
-    if (note) message += `• Catatan: ${note}%0A`;
-    message += `━━━━━━━━━━━━━━━━━━━━%0A`;
-    message += `*📦 DETAIL PESANAN:*%0A`;
-
-    cart.forEach((item, i) => {
-        message += `${i + 1}. ${item.name} (${item.variant === 'eceran' ? 'Eceran' : 'Grosir'})%0A`;
-        message += `   ${item.qty} x Rp ${item.price.toLocaleString('id-ID')} = *Rp ${(item.price * item.qty).toLocaleString('id-ID')}*%0A`;
-    });
-
-    message += `━━━━━━━━━━━━━━━━━━━━%0A`;
-    message += `*Total Barang:* ${totalQty} pcs%0A`;
-    
-    // Info Ongkir di WA
-    if (totalQty >= MIN_FREE_SHIPPING) {
-        message += `*Ongkir:* GRATIS (Min. 5 Barang)%0A`;
-    } else {
-        message += `*Ongkir:* Belum memenuhi syarat gratis ongkir%0A`;
-    }
-
-    message += `*💰 TOTAL BAYAR: Rp ${total.toLocaleString('id-ID')}*%0A`;
-    message += `━━━━━━━━━━━━━━━━━━━━%0A`;
-    message += `Mohon konfirmasi pesanan saya ya kak. Terima kasih! 🙏`;
-
-    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
-    window.open(waUrl, '_blank');
-
-    showToast('✅ Mengarahkan ke WhatsApp...');
-
-    setTimeout(() => {
-        cart = [];
-        saveCart();
-        updateCartCount();
-        closeCart();
-        document.getElementById('customerName').value = '';
-        document.getElementById('customerPhone').value = '';
-        document.getElementById('customerAddress').value = '';
-        document.getElementById('customerNote').value = '';
-    }, 2000);
-}
-
-let toastTimeout;
-function showToast(msg) {
-    const toast = document.getElementById('toast');
-    toast.innerHTML = msg;
-    toast.classList.add('show');
-    clearTimeout(toastTimeout);
-    toastTimeout = setTimeout(() => toast.classList.remove('show'), 3000);
-}
-
-// Mulai render
-renderProducts();
-updateCartCount();
-</script>
-</body>
-</html>
+    <button class="cat-btn" onclick="filterCategory('sembako', this)">🍚 Sembako</button>
+    <button class="cat-btn" onclick="filterCategory('telur', this)">🥚 Telur & Susu</button>
+    <button class="cat-btn" onclick="filterCategory('mie', this)">🍜 Mie Instan</button>
+    <button class="cat-btn" onclick="filterCategory('kopi', this)">☕ Kopi & Teh</button>
+    <button class="cat-btn" onclick="filterCategory('mandi', this)">🧴 Alat Mandi</button>
+    <button class="cat-btn" onclick="filterCategory('bumbu', this)">🧂 Bumbu Dapur</button>
+    <button class="cat-btn" onclick="filterCategory('camilan', this)">🍿 Camilan</button>
+    <button class="cat-btn" onclick="filterCategory('jajanan', this)">🍬 Jajanan Anak</button>
+    <button class="cat-btn" onclick="filterCategory('rokok', this)">🚬 Rokok</button>

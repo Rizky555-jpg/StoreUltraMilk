@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Warung Madura Berkah - Lengkap Murah</title>
+<title>Berkah Grosir - Warung Lengkap</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
     :root {
-        --primary: #d84315; 
-        --secondary: #ffb300; 
-        --accent: #2e7d32; 
-        --bg: #fbf8f1;
+        --primary: #2e7d32; /* Hijau */
+        --secondary: #ffb300; /* Kuning */
+        --accent: #d32f2f; /* Merah */
+        --bg: #f4f7f6;
         --text: #1e293b;
         --card-bg: #ffffff;
     }
@@ -49,7 +49,7 @@
     }
 
     .logo {
-        font-size: 18px;
+        font-size: 20px;
         font-weight: 800;
         color: var(--primary);
         display: flex;
@@ -57,7 +57,7 @@
         gap: 8px;
     }
 
-    .logo span { color: var(--text); }
+    .logo span { color: var(--secondary); }
 
     .cart-btn {
         background: var(--primary);
@@ -72,14 +72,14 @@
         align-items: center;
         gap: 8px;
         transition: 0.3s;
-        box-shadow: 0 8px 15px rgba(216, 67, 21, 0.3);
+        box-shadow: 0 8px 15px rgba(46, 125, 50, 0.3);
     }
 
-    .cart-btn:hover { transform: scale(1.05); background: #bf360c; }
+    .cart-btn:hover { transform: scale(1.05); background: #1b5e20; }
 
     .cart-badge {
-        background: var(--secondary);
-        color: var(--text);
+        background: var(--accent);
+        color: white;
         border-radius: 50%;
         padding: 2px 8px;
         font-size: 12px;
@@ -89,7 +89,7 @@
     /* HERO BANNER */
     .hero-banner {
         width: 100%;
-        height: 220px;
+        height: 200px;
         background: url('https://images.unsplash.com/photo-1604719312566-8912e9227c6a?q=80&w=1000&auto=format&fit=crop') center/cover;
         position: relative;
         display: flex;
@@ -99,16 +99,15 @@
         border-bottom-left-radius: 30px;
         border-bottom-right-radius: 30px;
         overflow: hidden;
-        animation: fadeUp 0.8s ease-out;
     }
 
-    @media (min-width: 768px) { .hero-banner { height: 320px; } }
+    @media (min-width: 768px) { .hero-banner { height: 300px; } }
 
     .hero-banner::before {
         content: '';
         position: absolute;
         top: 0; left: 0; width: 100%; height: 100%;
-        background: linear-gradient(to right, rgba(216,67,21,0.85), rgba(0,0,0,0.6));
+        background: linear-gradient(to right, rgba(27,94,32,0.85), rgba(0,0,0,0.6));
     }
 
     .hero-content {
@@ -119,41 +118,40 @@
     }
 
     .hero-content h1 {
-        font-size: 26px;
+        font-size: 24px;
         font-weight: 800;
-        margin-bottom: 10px;
+        margin-bottom: 8px;
         text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     }
 
-    @media (min-width: 768px) { .hero-content h1 { font-size: 38px; } }
+    @media (min-width: 768px) { .hero-content h1 { font-size: 36px; } }
 
-    .hero-content p { font-size: 14px; font-weight: 500; margin-bottom: 15px; }
+    .hero-content p { font-size: 13px; font-weight: 500; margin-bottom: 12px; }
 
     .hero-badge {
         display: inline-block;
         background: var(--secondary);
-        color: var(--text);
-        padding: 8px 20px;
+        color: #1b5e20;
+        padding: 6px 16px;
         border-radius: 50px;
         font-weight: 800;
-        font-size: 13px;
+        font-size: 11px;
         box-shadow: 0 10px 20px rgba(255,179,0,0.4);
     }
 
     /* SEARCH & FILTER */
     .search-container {
         max-width: 800px;
-        margin: -25px auto 20px;
+        margin: -20px auto 15px;
         padding: 0 20px;
         position: relative;
         z-index: 10;
-        animation: fadeUp 0.8s ease-out 0.2s both;
     }
 
     .search-box {
         background: white;
         border-radius: 50px;
-        padding: 15px 25px;
+        padding: 12px 20px;
         display: flex;
         align-items: center;
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -162,120 +160,111 @@
     }
 
     .search-box:focus-within { border-color: var(--primary); }
-    .search-box input { border: none; outline: none; width: 100%; font-size: 15px; margin-left: 10px; }
+    .search-box input { border: none; outline: none; width: 100%; font-size: 14px; margin-left: 10px; }
 
     .categories {
-        display: flex; gap: 10px; overflow-x: auto; padding: 0 20px 20px;
+        display: flex; gap: 8px; overflow-x: auto; padding: 0 20px 15px;
         max-width: 1000px; margin: 0 auto; scrollbar-width: none;
-        animation: fadeUp 0.8s ease-out 0.3s both;
     }
     .categories::-webkit-scrollbar { display: none; }
 
     .cat-btn {
         background: white; color: var(--text); border: 1px solid #e2e8f0;
-        padding: 10px 20px; border-radius: 50px; font-weight: 600; font-size: 13px;
+        padding: 8px 16px; border-radius: 50px; font-weight: 600; font-size: 12px;
         white-space: nowrap; cursor: pointer; transition: 0.3s;
     }
 
     .cat-btn.active {
         background: var(--primary); color: white; border-color: var(--primary);
-        box-shadow: 0 6px 15px rgba(216,67,21,0.3);
+        box-shadow: 0 4px 10px rgba(46,125,50,0.3);
     }
 
     /* CONTAINER */
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px 50px; }
 
     .products {
-        display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 15px;
+        display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px;
     }
 
     @media (min-width: 768px) {
-        .products { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 25px; }
+        .products { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
     }
 
     /* KARTU PRODUK */
     .product-card {
-        background: var(--card-bg); border-radius: 20px; padding: 15px;
+        background: var(--card-bg); border-radius: 16px; padding: 12px;
         display: flex; flex-direction: column; position: relative;
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        box-shadow: 0 10px 25px rgba(0,0,0,0.04); border: 1px solid #f1f5f9;
-        animation: fadeUp 0.6s ease-out both;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.04); border: 1px solid #f1f5f9;
     }
 
     .product-card:hover {
-        transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08);
         border-color: var(--primary);
     }
 
     /* BADGE PRODUK */
     .badge {
-        position: absolute; top: 15px; left: 15px; padding: 5px 12px;
-        border-radius: 20px; font-size: 10px; font-weight: 800; color: white; z-index: 2;
+        position: absolute; top: 10px; left: 10px; padding: 4px 10px;
+        border-radius: 20px; font-size: 9px; font-weight: 800; color: white; z-index: 2;
     }
-    .badge.bestseller { background: var(--accent); }
-    .badge.promo { background: var(--primary); }
+    .badge.bestseller { background: var(--primary); }
+    .badge.promo { background: var(--accent); }
 
     /* GAMBAR PRODUK */
     .img-container {
-        height: 140px; display: flex; align-items: center; justify-content: center;
-        margin-bottom: 10px; position: relative; background: #f8fafc; border-radius: 15px;
+        height: 120px; display: flex; align-items: center; justify-content: center;
+        margin-bottom: 10px; position: relative; background: #f8fafc; border-radius: 12px;
         overflow: hidden;
     }
 
-    @media (min-width: 768px) { .img-container { height: 180px; } }
+    @media (min-width: 768px) { .img-container { height: 160px; } }
 
     .img-container img {
-        width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;
+        width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;
     }
 
     .product-card:hover .img-container img { transform: scale(1.1); }
-    
-    /* Fallback Emoji jika gambar error */
-    .img-fallback {
-        font-size: 60px; display: flex; align-items: center; justify-content: center;
-        height: 100%; width: 100%; filter: drop-shadow(0 10px 10px rgba(0,0,0,0.15));
+
+    .img-container .emoji-fallback {
+        font-size: 50px; filter: drop-shadow(0 5px 5px rgba(0,0,0,0.1));
     }
-    @media (min-width: 768px) { .img-fallback { font-size: 80px; } }
 
     /* INFO PRODUK */
     .product-info { display: flex; flex-direction: column; flex-grow: 1; }
 
     .product-info h3 {
-        font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.3;
+        font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; line-height: 1.3;
         display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
     }
 
     .product-info .desc {
-        font-size: 11px; color: #64748b; margin-bottom: 8px; line-height: 1.4; flex-grow: 1;
+        font-size: 10px; color: #64748b; margin-bottom: 8px; line-height: 1.3; flex-grow: 1;
         display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
     }
 
-    /* TOGGLE SATUAN (ECERAN / GROSIR) */
+    /* TOGGLE SATUAN */
     .variant-toggle {
-        display: flex; background: #f1f5f9; border-radius: 10px; padding: 4px; margin-bottom: 10px;
+        display: flex; background: #f1f5f9; border-radius: 8px; padding: 3px; margin-bottom: 10px;
     }
 
     .variant-btn {
-        flex: 1; border: none; background: transparent; padding: 6px 0; border-radius: 8px;
-        font-size: 11px; font-weight: 700; color: #64748b; cursor: pointer; transition: 0.3s;
+        flex: 1; border: none; background: transparent; padding: 5px 0; border-radius: 6px;
+        font-size: 10px; font-weight: 700; color: #64748b; cursor: pointer; transition: 0.2s;
     }
 
     .variant-btn.active {
-        background: white; color: var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        background: white; color: var(--primary); box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
 
-    .price-row { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; flex-direction: column; }
-    
-    .price { font-size: 18px; font-weight: 800; color: var(--primary); }
-    
-    .price-detail {
-        font-size: 10px; color: #64748b; margin-top: 2px; font-weight: 500;
-    }
+    .price-row { display: flex; flex-direction: column; margin-bottom: 10px; }
+    .price { font-size: 16px; font-weight: 800; color: var(--primary); }
+    .price-detail { font-size: 10px; color: #64748b; font-weight: 500; }
 
     .add-btn {
-        background: #fff3e0; color: var(--primary); border: none; padding: 10px;
-        border-radius: 12px; font-weight: 700; font-size: 13px; cursor: pointer;
-        transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 5px; width: 100%;
+        background: #e8f5e9; color: var(--primary); border: none; padding: 8px;
+        border-radius: 10px; font-weight: 700; font-size: 12px; cursor: pointer;
+        transition: 0.2s; display: flex; align-items: center; justify-content: center; gap: 5px; width: 100%;
     }
 
     .add-btn:hover { background: var(--primary); color: white; }
@@ -290,116 +279,105 @@
     .modal-overlay.active { display: flex; }
 
     .modal {
-        background: white; width: 100%; max-width: 500px; border-top-left-radius: 30px;
-        border-top-right-radius: 30px; max-height: 90vh; display: flex; flex-direction: column;
-        animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        background: white; width: 100%; max-width: 500px; border-top-left-radius: 24px;
+        border-top-right-radius: 24px; max-height: 90vh; display: flex; flex-direction: column;
+        animation: slideUp 0.3s ease;
     }
 
-    @media (min-width: 768px) { .modal { border-radius: 30px; } }
+    @media (min-width: 768px) { .modal { border-radius: 24px; } }
     @keyframes slideUp { from { transform: translateY(100%); } to { transform: translateY(0); } }
 
     .modal-header {
-        padding: 20px; border-bottom: 1px solid #f1f5f9; display: flex;
-        justify-content: space-between; align-items: center; position: sticky; top: 0;
-        background: white; border-radius: 30px 30px 0 0; z-index: 10;
+        padding: 15px 20px; border-bottom: 1px solid #f1f5f9; display: flex;
+        justify-content: space-between; align-items: center;
     }
 
-    .modal-header h2 { font-size: 18px; font-weight: 800; color: var(--text); }
+    .modal-header h2 { font-size: 16px; font-weight: 800; }
 
     .close-btn {
-        background: #f1f5f9; color: #64748b; border: none; width: 35px; height: 35px;
-        border-radius: 50%; font-size: 18px; cursor: pointer; display: flex;
-        align-items: center; justify-content: center;
+        background: #f1f5f9; color: #64748b; border: none; width: 30px; height: 30px;
+        border-radius: 50%; font-size: 16px; cursor: pointer;
     }
 
-    .modal-body { padding: 20px; overflow-y: auto; flex: 1; }
+    .modal-body { padding: 15px 20px; overflow-y: auto; flex: 1; }
 
     /* BANNER ONGKIR */
     .shipping-info {
-        background: #fff3e0; border: 1px solid #ffe0b2; padding: 12px; border-radius: 12px;
-        font-size: 12px; font-weight: 600; color: #e65100; margin-bottom: 15px;
-        display: flex; align-items: center; gap: 10px;
+        background: #fff3e0; border: 1px solid #ffe0b2; padding: 10px; border-radius: 10px;
+        font-size: 11px; font-weight: 600; color: #e65100; margin-bottom: 15px;
     }
-    .shipping-info.success {
-        background: #e8f5e9; border-color: #c8e6c9; color: var(--accent);
-    }
+    .shipping-info.success { background: #e8f5e9; border-color: #c8e6c9; color: var(--primary); }
 
     /* ITEM KERANJANG */
     .cart-item {
-        display: flex; gap: 15px; background: white; padding: 15px;
-        border-radius: 15px; margin-bottom: 15px; border: 1px solid #f1f5f9; align-items: center;
+        display: flex; gap: 10px; background: white; padding: 10px;
+        border-radius: 12px; margin-bottom: 10px; border: 1px solid #f1f5f9; align-items: center;
     }
 
-    .cart-item .cart-img {
-        width: 50px; height: 50px; object-fit: cover; border-radius: 8px; background: #f8fafc;
-        display: flex; align-items: center; justify-content: center; font-size: 30px;
+    .cart-item img {
+        width: 40px; height: 40px; object-fit: cover; border-radius: 6px; background: #f8fafc;
     }
 
     .cart-item-info { flex: 1; }
-    .cart-item-info h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
-    .cart-item-info .variant-label { font-size: 10px; color: #64748b; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 4px;}
-    .cart-item-info .item-price { font-size: 13px; font-weight: 800; color: var(--primary); }
+    .cart-item-info h4 { font-size: 12px; font-weight: 700; margin-bottom: 2px; }
+    .cart-item-info .variant-label { font-size: 9px; color: #64748b; background: #f1f5f9; padding: 2px 5px; border-radius: 4px; }
+    .cart-item-info .item-price { font-size: 12px; font-weight: 800; color: var(--primary); margin-top: 2px;}
 
     .qty-controls {
-        display: flex; align-items: center; gap: 10px; background: var(--bg);
-        padding: 5px; border-radius: 20px;
+        display: flex; align-items: center; gap: 8px; background: var(--bg);
+        padding: 4px; border-radius: 16px;
     }
 
     .qty-btn {
-        background: white; color: var(--primary); border: none; width: 28px; height: 28px;
-        border-radius: 50%; font-size: 16px; font-weight: bold; cursor: pointer;
-        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        background: white; color: var(--primary); border: none; width: 24px; height: 24px;
+        border-radius: 50%; font-size: 14px; font-weight: bold; cursor: pointer;
     }
 
-    .qty-num { font-size: 14px; font-weight: 700; min-width: 20px; text-align: center; }
+    .qty-num { font-size: 12px; font-weight: 700; min-width: 15px; text-align: center; }
 
-    .empty-cart { text-align: center; padding: 40px 0; color: #94a3b8; }
+    .empty-cart { text-align: center; padding: 30px 0; color: #94a3b8; }
 
     /* FORM CHECKOUT */
-    .checkout-section { background: #f8fafc; padding: 20px; border-radius: 20px; margin-top: 20px; }
-    .form-group { margin-bottom: 15px; }
-    .form-group label { display: block; font-size: 12px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+    .checkout-section { background: #f8fafc; padding: 15px; border-radius: 16px; margin-top: 15px; }
+    .form-group { margin-bottom: 10px; }
+    .form-group label { display: block; font-size: 11px; font-weight: 700; margin-bottom: 5px; }
     .form-group input, .form-group textarea {
-        width: 100%; padding: 12px 15px; border: 2px solid #e2e8f0; border-radius: 12px;
-        font-size: 14px; font-family: 'Poppins', sans-serif; transition: 0.3s; background: white;
+        width: 100%; padding: 10px; border: 1px solid #e2e8f0; border-radius: 8px;
+        font-size: 13px; font-family: 'Poppins', sans-serif;
     }
     .form-group input:focus, .form-group textarea:focus { border-color: var(--primary); outline: none; }
 
     /* FOOTER MODAL */
     .modal-footer {
-        padding: 20px; border-top: 1px solid #f1f5f9; background: white;
-        border-radius: 0 0 30px 30px; position: sticky; bottom: 0; box-shadow: 0 -10px 20px rgba(0,0,0,0.02);
+        padding: 15px 20px; border-top: 1px solid #f1f5f9; background: white;
+        border-radius: 0 0 24px 24px;
     }
 
-    .cart-total { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; font-size: 16px; font-weight: 700; }
-    .cart-total span:last-child { font-size: 22px; font-weight: 800; color: var(--primary); }
+    .cart-total { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; font-size: 14px; font-weight: 700; }
+    .cart-total span:last-child { font-size: 18px; font-weight: 800; color: var(--primary); }
 
     .checkout-btn {
-        width: 100%; background: #25d366; color: white; border: none; padding: 16px;
-        border-radius: 15px; font-size: 16px; font-weight: 800; cursor: pointer;
-        display: flex; align-items: center; justify-content: center; gap: 10px; transition: 0.3s;
-        box-shadow: 0 8px 20px rgba(37,211,102,0.3);
+        width: 100%; background: #25d366; color: white; border: none; padding: 12px;
+        border-radius: 12px; font-size: 14px; font-weight: 800; cursor: pointer;
+        display: flex; align-items: center; justify-content: center; gap: 8px;
     }
-
-    .checkout-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 25px rgba(37,211,102,0.4); }
 
     /* TOAST */
     .toast {
         position: fixed; top: 20px; left: 50%; transform: translateX(-50%) translateY(-100px);
-        background: var(--text); color: white; padding: 12px 24px; border-radius: 50px;
-        font-size: 13px; font-weight: 600; z-index: 2000; transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        display: flex; align-items: center; gap: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        background: var(--text); color: white; padding: 10px 20px; border-radius: 50px;
+        font-size: 12px; font-weight: 600; z-index: 2000; transition: 0.3s ease;
     }
 
     .toast.show { transform: translateX(-50%) translateY(0); }
 
-    footer { text-align: center; padding: 30px; color: #94a3b8; font-size: 12px; }
+    footer { text-align: center; padding: 20px; color: #94a3b8; font-size: 11px; }
 </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">🏪 WARUNG<span>MADURA</span></div>
+    <div class="logo">🛒 BERKAH<span>GROSIR</span></div>
     <button class="cart-btn" onclick="openCart()">
         🛒 <span class="cart-badge" id="cartCount">0</span>
     </button>
@@ -407,8 +385,8 @@
 
 <section class="hero-banner">
     <div class="hero-content">
-        <h1>Warung Madura Berkah<br>Serba Ada, Harga Bersahabat</h1>
-        <p>Belanja kebutuhan harian tanpa keluar rumah</p>
+        <h1>Warung Lengkap<br>Serba Ada & Murah</h1>
+        <p>Kebutuhan harian, jajanan, sampai gas ada semua!</p>
         <div class="hero-badge">🚚 GRATIS ONGKIR MIN. 5 BARANG</div>
     </div>
 </section>
@@ -416,18 +394,505 @@
 <div class="search-container">
     <div class="search-box">
         <span>🔍</span>
-        <input type="text" id="searchInput" placeholder="Cari beras, mie, sabun, rokok..." oninput="renderProducts()">
+        <input type="text" id="searchInput" placeholder="Cari barang warung..." oninput="renderProducts()">
     </div>
 </div>
 
 <div class="categories" id="categoryList">
-    <button class="cat-btn active" onclick="filterCategory('semua', this)">Semua Barang</button>
-    <button class="cat-btn" onclick="filterCategory('sembako', this)">🍚 Sembako</button>
-    <button class="cat-btn" onclick="filterCategory('telur', this)">🥚 Telur & Susu</button>
-    <button class="cat-btn" onclick="filterCategory('mie', this)">🍜 Mie Instan</button>
-    <button class="cat-btn" onclick="filterCategory('kopi', this)">☕ Kopi & Teh</button>
-    <button class="cat-btn" onclick="filterCategory('mandi', this)">🧴 Alat Mandi</button>
-    <button class="cat-btn" onclick="filterCategory('bumbu', this)">🧂 Bumbu Dapur</button>
-    <button class="cat-btn" onclick="filterCategory('camilan', this)">🍿 Camilan</button>
-    <button class="cat-btn" onclick="filterCategory('jajanan', this)">🍬 Jajanan Anak</button>
-    <button class="cat-btn" onclick="filterCategory('rokok', this)">🚬 Rokok</button>
+    <button class="cat-btn active" onclick="filterCategory('semua', this)">Semua</button>
+    <button class="cat-btn" onclick="filterCategory('sembako', this)">Sembako</button>
+    <button class="cat-btn" onclick="filterCategory('jajanan', this)">Jajanan</button>
+    <button class="cat-btn" onclick="filterCategory('camilan', this)">Camilan</button>
+    <button class="cat-btn" onclick="filterCategory('instan', this)">Mie Instan</button>
+    <button class="cat-btn" onclick="filterCategory('minuman', this)">Minuman</button>
+    <button class="cat-btn" onclick="filterCategory('rumah', this)">Kebutuhan Rumah</button>
+    <button class="cat-btn" onclick="filterCategory('masakan', this)">Bumbu Dapur</button>
+    <button class="cat-btn" onclick="filterCategory('rokok', this)">Rokok</button>
+    <button class="cat-btn" onclick="filterCategory('gas', this)">Gas & Galon</button>
+    <button class="cat-btn" onclick="filterCategory('kopi', this)">Kopi/Susu</button>
+    <button class="cat-btn" onclick="filterCategory('telur', this)">Telur/Frozen</button>
+</div>
+
+<div class="container">
+    <div class="products" id="productList"></div>
+</div>
+
+<!-- MODAL KERANJANG -->
+<div class="modal-overlay" id="cartModal">
+    <div class="modal">
+        <div class="modal-header">
+            <h2>🛒 Keranjang Belanja</h2>
+            <button class="close-btn" onclick="closeCart()">✕</button>
+        </div>
+        <div class="modal-body">
+            <div id="shippingBanner"></div>
+            <div id="cartItems"></div>
+            
+            <div id="orderForm" class="checkout-section" style="display:none;">
+                <h3 style="font-size:13px; margin-bottom:10px;">Detail Pengiriman</h3>
+                <div class="form-group">
+                    <label>Nama Penerima</label>
+                    <input type="text" id="customerName" placeholder="Nama lengkap">
+                </div>
+                <div class="form-group">
+                    <label>No. WhatsApp</label>
+                    <input type="tel" id="customerPhone" placeholder="0812...">
+                </div>
+                <div class="form-group">
+                    <label>Alamat Lengkap</label>
+                    <textarea id="customerAddress" rows="2" placeholder="Jalan, RT/RW, Kelurahan"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Catatan</label>
+                    <input type="text" id="customerNote" placeholder="Contoh: Rokok yang warna merah">
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal-footer" id="modalFooter" style="display:none;">
+            <div class="cart-total">
+                <span>Total Harga:</span>
+                <span id="totalPrice">Rp 0</span>
+            </div>
+            <button class="checkout-btn" onclick="checkoutWA()">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+                Pesan via WhatsApp
+            </button>
+        </div>
+    </div>
+</div>
+
+<div class="toast" id="toast">Berhasil!</div>
+
+<footer>
+    <p>&copy; 2024 Berkah Grosir. All rights reserved.</p>
+</footer>
+
+<script>
+// ================= KONFIGURASI =================
+const WHATSAPP_NUMBER = "6285772590983"; 
+const MIN_FREE_SHIPPING = 5;
+
+// ================= DATA PRODUK WARUNG LENGKAP =================
+// Gw pakai link gambar Unsplash/Web yang stabil. 
+// Jika error, bakal otomatis jadi Emoji.
+const products = [
+    // --- SEMBAKO ---
+    { id: 1, name: "Beras Pandan Wangi", desc: "Beras pulen wangi.", category: "sembako", badge: "bestseller", emoji: "🍚",
+      eceran: { price: 15000, unit: "1 kg", img: "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 72000, unit: "Karung 5 kg", img: "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=400&auto=format&fit=crop" }
+    },
+    { id: 2, name: "Gula Pasir Gulaku", desc: "Gula tebu murni premium.", category: "sembako", emoji: "🍬",
+      eceran: { price: 8500, unit: "Sachet 250g", img: "https://images.unsplash.com/photo-1581609043483-1c4c442b47d6?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 16500, unit: "Bungkus 1kg", img: "https://images.unsplash.com/photo-1581609043483-1c4c442b47d6?q=80&w=400&auto=format&fit=crop" }
+    },
+    { id: 3, name: "Minyak Sania", desc: "Minyak goreng jernih.", category: "sembako", emoji: "🛢️",
+      eceran: { price: 18000, unit: "Pouch 1L", img: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 34000, unit: "Pouch 2L", img: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?q=80&w=400&auto=format&fit=crop" }
+    },
+
+    // --- JAJANAN ANAK ---
+    { id: 4, name: "Chiki Balls", desc: "Snack keju renyah.", category: "jajanan", emoji: "🧀",
+      eceran: { price: 2000, unit: "1 Bungkus", img: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 20000, unit: "1 Ball (10 pcs)", img: "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?q=80&w=400&auto=format&fit=crop" }
+    },
+    { id: 5, name: "Taro Net", desc: "Snack rumput laut.", category: "jajanan", emoji: "🍟",
+      eceran: { price: 5000, unit: "1 Bungkus", img: "https://images.unsplash.com/photo-1566478989037-e924e9374882?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 45000, unit: "1 Ball (10 pcs)", img: "https://images.unsplash.com/photo-1566478989037-e924e9374882?q=80&w=400&auto=format&fit=crop" }
+    },
+    { id: 6, name: "Permen Kopiko", desc: "Permen kopi susu.", category: "jajanan", emoji: "🍬",
+      eceran: { price: 500, unit: "1 Butir", img: "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 9000, unit: "1 Pack", img: "https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?q=80&w=400&auto=format&fit=crop" }
+    },
+
+    // --- CAMILAN ---
+    { id: 7, name: "Biskuit Roma", desc: "Biskuit kelapa manis.", category: "camilan", emoji: "🍪",
+      eceran: { price: 9000, unit: "1 Bungkus", img: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 85000, unit: "1 Karton", img: "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?q=80&w=400&auto=format&fit=crop" }
+    },
+    { id: 8, name: "Kacang Garuda", desc: "Kacang panggang gurih.", category: "camilan", emoji: "🥜",
+      eceran: { price: 10000, unit: "1 Bungkus", img: "https://images.unsplash.com/photo-1567892737950-30c4db37cd89?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 95000, unit: "1 Karton", img: "https://images.unsplash.com/photo-1567892737950-30c4db37cd89?q=80&w=400&auto=format&fit=crop" }
+    },
+
+    // --- INSTAN ---
+    { id: 9, name: "Indomie Goreng", desc: "Mie instan legendaris.", category: "instan", badge: "bestseller", emoji: "🍜",
+      eceran: { price: 3200, unit: "1 Bungkus", img: "https://images.unsplash.com/photo-1612927601601-6638404737ce?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 118000, unit: "1 Dus (40 pcs)", img: "https://images.unsplash.com/photo-1612927601601-6638404737ce?q=80&w=400&auto=format&fit=crop" }
+    },
+    { id: 10, name: "Mie Sedaap Soto", desc: "Mie kuah rasa soto.", category: "instan", emoji: "🍲",
+      eceran: { price: 3000, unit: "1 Bungkus", img: "https://images.unsplash.com/photo-1552611052-33e04de081de?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 110000, unit: "1 Dus (40 pcs)", img: "https://images.unsplash.com/photo-1552611052-33e04de081de?q=80&w=400&auto=format&fit=crop" }
+    },
+
+    // --- MINUMAN ---
+    { id: 11, name: "Teh Kotak Sosro", desc: "Teh manis dalam kotak.", category: "minuman", emoji: "🧃",
+      eceran: { price: 4000, unit: "1 Kotak", img: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 45000, unit: "1 Karton (12 pcs)", img: "https://images.unsplash.com/photo-1576092768241-dec231879fc3?q=80&w=400&auto=format&fit=crop" }
+    },
+    { id: 12, name: "Air Mineral Aqua", desc: "Air mineral murni.", category: "minuman", emoji: "💧",
+      eceran: { price: 4000, unit: "Botol 600ml", img: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 45000, unit: "1 Dus (24 pcs)", img: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?q=80&w=400&auto=format&fit=crop" }
+    },
+
+    // --- KEBUTUHAN RUMAH ---
+    { id: 13, name: "Sabun Lifebuoy", desc: "Sabun batang anti kuman.", category: "rumah", emoji: "🧼",
+      eceran: { price: 4500, unit: "1 Batang", img: "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 50000, unit: "1 Dus (12 pcs)", img: "https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?q=80&w=400&auto=format&fit=crop" }
+    },
+    { id: 14, name: "Pepsodent 190g", desc: "Pasta gigi pelindung gigi.", category: "rumah", emoji: "🪥",
+      eceran: { price: 18000, unit: "1 Tube", img: "https://images.unsplash.com/photo-1559598467-f8b76c8155d0?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 200000, unit: "1 Karton (12 pcs)", img: "https://images.unsplash.com/photo-1559598467-f8b76c8155d0?q=80&w=400&auto=format&fit=crop" }
+    },
+    { id: 15, name: "Rinso Anti Noda", desc: "Deterjen bubuk 800g.", category: "rumah", emoji: "🧺",
+      eceran: { price: 22000, unit: "1 Bungkus", img: "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 250000, unit: "1 Karton (12 pcs)", img: "https://images.unsplash.com/photo-1610557892470-55d9e80c0bce?q=80&w=400&auto=format&fit=crop" }
+    },
+
+    // --- BUMBU DAPUR ---
+    { id: 16, name: "Kecap Bango", desc: "Kecap manis kedelai hitam.", category: "masakan", emoji: "🧴",
+      eceran: { price: 9500, unit: "Botol 275ml", img: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 110000, unit: "1 Dus (12 pcs)", img: "https://images.unsplash.com/photo-1588166524941-3bf61a9c41db?q=80&w=400&auto=format&fit=crop" }
+    },
+    { id: 17, name: "Garam Dapur", desc: "Garam beryodium halus.", category: "masakan", emoji: "🧂",
+      eceran: { price: 3000, unit: "1 Bungkus", img: "https://images.unsplash.com/photo-1518110925495-5fe2fda0442c?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 30000, unit: "1 Ball (10 pcs)", img: "https://images.unsplash.com/photo-1518110925495-5fe2fda0442c?q=80&w=400&auto=format&fit=crop" }
+    },
+    { id: 18, name: "Royco Ayam", desc: "Penyedap rasa kaldu ayam.", category: "masakan", emoji: "🍲",
+      eceran: { price: 500, unit: "1 Sachet", img: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 9000, unit: "1 Pack (20 sachet)", img: "https://images.unsplash.com/photo-1596040033229-a9821ebd058d?q=80&w=400&auto=format&fit=crop" }
+    },
+
+    // --- ROKOK ---
+    { id: 19, name: "Sampoerna Mild", desc: "Rokok mild 16 batang.", category: "rokok", emoji: "🚬",
+      eceran: { price: 32000, unit: "1 Bungkus", img: "https://images.unsplash.com/photo-1527661591475-527312dd65f5?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 310000, unit: "1 Slop (10 bks)", img: "https://images.unsplash.com/photo-1527661591475-527312dd65f5?q=80&w=400&auto=format&fit=crop" }
+    },
+    { id: 20, name: "Gudang Garam Merah", desc: "Rokok kretek 12 batang.", category: "rokok", emoji: "🚬",
+      eceran: { price: 25000, unit: "1 Bungkus", img: "https://images.unsplash.com/photo-1527661591475-527312dd65f5?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 240000, unit: "1 Slop (10 bks)", img: "https://images.unsplash.com/photo-1527661591475-527312dd65f5?q=80&w=400&auto=format&fit=crop" }
+    },
+
+    // --- GAS & GALON ---
+    { id: 21, name: "Gas LPG 3kg", desc: "Tabung gas melon.", category: "gas", emoji: "🔥",
+      eceran: { price: 22000, unit: "1 Tabung", img: "https://images.unsplash.com/photo-1585671963747-3e68452b5c38?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 210000, unit: "1 Set (10 tabung)", img: "https://images.unsplash.com/photo-1585671963747-3e68452b5c38?q=80&w=400&auto=format&fit=crop" }
+    },
+    { id: 22, name: "Galon Aqua Isi", desc: "Air mineral 19 Liter.", category: "gas", emoji: "🚰",
+      eceran: { price: 20000, unit: "1 Galon", img: "https://images.unsplash.com/photo-1523362628745-0c100150b504?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 190000, unit: "1 Set (10 galon)", img: "https://images.unsplash.com/photo-1523362628745-0c100150b504?q=80&w=400&auto=format&fit=crop" }
+    },
+
+    // --- KOPI & SUSU ---
+    { id: 23, name: "Kopi Kapal Api", desc: "Kopi bubuk robusta mantap.", category: "kopi", emoji: "☕",
+      eceran: { price: 2000, unit: "1 Sachet", img: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 14000, unit: "1 Bungkus 165g", img: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=400&auto=format&fit=crop" }
+    },
+    { id: 24, name: "Susu Ultra Milk", desc: "Susu UHT Full Cream.", category: "kopi", badge: "promo", emoji: "🥛",
+      eceran: { price: 6000, unit: "1 Kotak 250ml", img: "https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 60000, unit: "1 Karton (12 pcs)", img: "https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=400&auto=format&fit=crop" }
+    },
+
+    // --- TELUR & FROZEN ---
+    { id: 25, name: "Telur Ayam Negeri", desc: "Telur segar kualitas super.", category: "telur", badge: "bestseller", emoji: "🥚",
+      eceran: { price: 2500, unit: "1 Butir", img: "https://images.unsplash.com/photo-1506976785307-8732e854ad03?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 28000, unit: "1 Tray / 1 kg", img: "https://images.unsplash.com/photo-1506976785307-8732e854ad03?q=80&w=400&auto=format&fit=crop" }
+    },
+    { id: 26, name: "Nugget Fiesta", desc: "Nugget ayam frozen 500g.", category: "telur", emoji: "🍗",
+      eceran: { price: 35000, unit: "1 Pack", img: "https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=400&auto=format&fit=crop" },
+      grosir: { price: 320000, unit: "1 Karton (10 pack)", img: "https://images.unsplash.com/photo-1562967914-608f82629710?q=80&w=400&auto=format&fit=crop" }
+    }
+];
+
+let cart = JSON.parse(localStorage.getItem('grosirCartV3')) || [];
+let currentCategory = 'semua';
+
+// ================= RENDER PRODUK =================
+function renderProducts() {
+    const list = document.getElementById('productList');
+    const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+    
+    const filtered = products.filter(p => {
+        const matchSearch = p.name.toLowerCase().includes(searchTerm);
+        const matchCat = currentCategory === 'semua' || p.category === currentCategory;
+        return matchSearch && matchCat;
+    });
+
+    if (filtered.length === 0) {
+        list.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding:40px; color:#94a3b8;">Barang tidak ditemukan 😔</div>`;
+        return;
+    }
+
+    list.innerHTML = filtered.map((p, index) => {
+        let badgeHtml = '';
+        if (p.badge === 'bestseller') badgeHtml = '<div class="badge bestseller">🔥 LARIS</div>';
+        if (p.badge === 'promo') badgeHtml = '<div class="badge promo">⚡ PROMO</div>';
+
+        return `
+        <div class="product-card" style="animation-delay: ${index * 0.05}s">
+            ${badgeHtml}
+            <div class="img-container" id="img-container-${p.id}">
+                <!-- Gambar di-render via JS -->
+            </div>
+            <div class="product-info">
+                <h3>${p.name}</h3>
+                <p class="desc">${p.desc}</p>
+                
+                <div class="variant-toggle">
+                    <button class="variant-btn active" id="btn-eceran-${p.id}" onclick="switchVariant(${p.id}, 'eceran')">Eceran</button>
+                    <button class="variant-btn" id="btn-grosir-${p.id}" onclick="switchVariant(${p.id}, 'grosir')">Grosir</button>
+                </div>
+
+                <div class="price-row" id="price-row-${p.id}"></div>
+                <button class="add-btn" onclick="addToCart(${p.id})">
+                    <span>+</span> Tambah
+                </button>
+            </div>
+        </div>
+        `;
+    }).join('');
+
+    filtered.forEach(p => switchVariant(p.id, 'eceran'));
+}
+
+// ================= TOGGLE VARIAN =================
+function switchVariant(id, type) {
+    const product = products.find(p => p.id === id);
+    if (!product) return;
+
+    document.getElementById(`btn-eceran-${id}`).classList.toggle('active', type === 'eceran');
+    document.getElementById(`btn-grosir-${id}`).classList.toggle('active', type === 'grosir');
+
+    const data = type === 'eceran' ? product.eceran : product.grosir;
+
+    const imgContainer = document.getElementById(`img-container-${id}`);
+    // Gunakan gambar, jika error fallback ke emoji
+    imgContainer.innerHTML = `<img src="${data.img}" alt="${product.name}" loading="lazy" 
+        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <div class="emoji-fallback" style="display:none;">${product.emoji}</div>`;
+
+    const priceRow = document.getElementById(`price-row-${id}`);
+    priceRow.innerHTML = `
+        <span class="price">Rp ${data.price.toLocaleString('id-ID')}</span>
+        <span class="price-detail">Per ${data.unit}</span>
+    `;
+
+    document.querySelector(`#btn-eceran-${id}`).closest('.product-card').dataset.selectedVariant = type;
+}
+
+// ================= FILTER KATEGORI =================
+function filterCategory(cat, btn) {
+    currentCategory = cat;
+    document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    renderProducts();
+}
+
+// ================= LOGIKA KERANJANG =================
+function addToCart(id) {
+    const product = products.find(p => p.id === id);
+    const card = document.querySelector(`#btn-eceran-${id}`).closest('.product-card');
+    const selectedVariant = card.dataset.selectedVariant || 'eceran';
+    
+    const variantData = product[selectedVariant];
+    const cartItemId = `${product.id}-${selectedVariant}`;
+
+    const existing = cart.find(item => item.cartItemId === cartItemId);
+
+    if (existing) {
+        existing.qty += 1;
+    } else {
+        cart.push({ 
+            cartItemId: cartItemId,
+            id: product.id,
+            name: product.name,
+            variant: selectedVariant,
+            unit: variantData.unit,
+            price: variantData.price,
+            img: variantData.img,
+            emoji: product.emoji,
+            qty: 1 
+        });
+    }
+
+    saveCart();
+    updateCartCount();
+    
+    const labelVariant = selectedVariant === 'eceran' ? 'Eceran' : 'Grosir';
+    showToast(`✅ ${product.name} (${labelVariant}) ditambahkan!`);
+}
+
+function saveCart() {
+    localStorage.setItem('grosirCartV3', JSON.stringify(cart));
+}
+
+function updateCartCount() {
+    const count = cart.reduce((sum, item) => sum + item.qty, 0);
+    const badge = document.getElementById('cartCount');
+    badge.textContent = count;
+    badge.style.transform = 'scale(1.5)';
+    setTimeout(() => badge.style.transform = 'scale(1)', 200);
+}
+
+function renderCart() {
+    const cartItems = document.getElementById('cartItems');
+    const orderForm = document.getElementById('orderForm');
+    const modalFooter = document.getElementById('modalFooter');
+    const totalPriceEl = document.getElementById('totalPrice');
+    const shippingBanner = document.getElementById('shippingBanner');
+
+    if (cart.length === 0) {
+        cartItems.innerHTML = `
+            <div class="empty-cart">
+                <div style="font-size:40px; margin-bottom:10px;">🛒</div>
+                <h3>Keranjang kosong</h3>
+                <p style="font-size:11px;">Yuk belanja kebutuhan warung!</p>
+            </div>
+        `;
+        orderForm.style.display = 'none';
+        modalFooter.style.display = 'none';
+        shippingBanner.innerHTML = '';
+        return;
+    }
+
+    const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+    
+    if (totalQty >= MIN_FREE_SHIPPING) {
+        shippingBanner.innerHTML = `<div class="shipping-info success">🚚 Selamat! Pesanan Anda dapat <b>GRATIS ONGKIR</b>.</div>`;
+    } else {
+        const sisa = MIN_FREE_SHIPPING - totalQty;
+        shippingBanner.innerHTML = `<div class="shipping-info">🛍️ Beli <b>${sisa} barang lagi</b> untuk GRATIS ONGKIR!</div>`;
+    }
+
+    cartItems.innerHTML = cart.map(item => `
+        <div class="cart-item">
+            <img src="${item.img}" alt="${item.name}" onerror="this.outerHTML='<div style=\\'width:40px;height:40px;display:flex;align-items:center;justify-content:center;font-size:24px;background:#f8fafc;border-radius:6px;\\'>${item.emoji}</div>'">
+            <div class="cart-item-info">
+                <h4>${item.name}</h4>
+                <span class="variant-label">${item.variant === 'eceran' ? 'Eceran' : 'Grosir'} - ${item.unit}</span>
+                <div class="item-price">Rp ${item.price.toLocaleString('id-ID')}</div>
+            </div>
+            <div class="qty-controls">
+                <button class="qty-btn" onclick="changeQty('${item.cartItemId}', -1)">−</button>
+                <span class="qty-num">${item.qty}</span>
+                <button class="qty-btn" onclick="changeQty('${item.cartItemId}', 1)">+</button>
+            </div>
+        </div>
+    `).join('');
+
+    orderForm.style.display = 'block';
+    modalFooter.style.display = 'block';
+
+    const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+    totalPriceEl.textContent = `Rp ${total.toLocaleString('id-ID')}`;
+}
+
+function changeQty(cartItemId, delta) {
+    const item = cart.find(i => i.cartItemId === cartItemId);
+    if (!item) return;
+
+    item.qty += delta;
+    if (item.qty <= 0) {
+        cart = cart.filter(i => i.cartItemId !== cartItemId);
+    }
+    saveCart();
+    updateCartCount();
+    renderCart();
+}
+
+// ================= MODAL CONTROL =================
+function openCart() {
+    document.getElementById('cartModal').classList.add('active');
+    document.body.style.overflow = 'hidden';
+    renderCart();
+}
+
+function closeCart() {
+    document.getElementById('cartModal').classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+document.getElementById('cartModal').addEventListener('click', (e) => {
+    if (e.target.id === 'cartModal') closeCart();
+});
+
+// ================= CHECKOUT WHATSAPP =================
+function checkoutWA() {
+    const name = document.getElementById('customerName').value.trim();
+    const phone = document.getElementById('customerPhone').value.trim();
+    const address = document.getElementById('customerAddress').value.trim();
+    const note = document.getElementById('customerNote').value.trim();
+
+    if (!name || !phone || !address) {
+        showToast('⚠️ Lengkapi Nama, WA, dan Alamat!');
+        return;
+    }
+
+    const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+    const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+    const orderId = 'BG-' + Date.now().toString().slice(-6);
+    const date = new Date().toLocaleString('id-ID', { dateStyle: 'long', timeStyle: 'short' });
+
+    let message = `*🛒 PESANAN BARU - BERKAH GROSIR*%0A`;
+    message += `━━━━━━━━━━━━━━━━━━━━%0A`;
+    message += `*Order ID:* ${orderId}%0A`;
+    message += `*Tanggal:* ${date}%0A`;
+    message += `━━━━━━━━━━━━━━━━━━━━%0A`;
+    message += `*📋 DATA PEMBELI:*%0A`;
+    message += `• Nama: ${name}%0A`;
+    message += `• No. WA: ${phone}%0A`;
+    message += `• Alamat: ${address}%0A`;
+    if (note) message += `• Catatan: ${note}%0A`;
+    message += `━━━━━━━━━━━━━━━━━━━━%0A`;
+    message += `*📦 DETAIL PESANAN:*%0A`;
+
+    cart.forEach((item, i) => {
+        message += `${i + 1}. ${item.name} (${item.variant === 'eceran' ? 'Eceran' : 'Grosir'})%0A`;
+        message += `   ${item.qty} x Rp ${item.price.toLocaleString('id-ID')} = *Rp ${(item.price * item.qty).toLocaleString('id-ID')}*%0A`;
+    });
+
+    message += `━━━━━━━━━━━━━━━━━━━━%0A`;
+    message += `*Total Barang:* ${totalQty} pcs%0A`;
+    
+    if (totalQty >= MIN_FREE_SHIPPING) {
+        message += `*Ongkir:* GRATIS (Min. 5 Barang)%0A`;
+    } else {
+        message += `*Ongkir:* Belum memenuhi syarat gratis ongkir%0A`;
+    }
+
+    message += `*💰 TOTAL BAYAR: Rp ${total.toLocaleString('id-ID')}*%0A`;
+    message += `━━━━━━━━━━━━━━━━━━━━%0A`;
+    message += `Mohon konfirmasi pesanan saya ya kak. Terima kasih! 🙏`;
+
+    const waUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`;
+    window.open(waUrl, '_blank');
+
+    showToast('✅ Mengarahkan ke WhatsApp...');
+
+    setTimeout(() => {
+        cart = [];
+        saveCart();
+        updateCartCount();
+        closeCart();
+        document.getElementById('customerName').value = '';
+        document.getElementById('customerPhone').value = '';
+        document.getElementById('customerAddress').value = '';
+        document.getElementById('customerNote').value = '';
+    }, 2000);
+}
+
+let toastTimeout;
+function showToast(msg) {
+    const toast = document.getElementById('toast');
+    toast.innerHTML = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+// Mulai render
+renderProducts();
+updateCartCount();
+</script>
+</body>
+    </html>

@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Ultra Milk Store - Susu Premium Asli</title>
+<title>Berkah Grosir - Sembako Lengkap</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 <style>
     :root {
-        --primary: #0056b3;
-        --secondary: #00a8ff;
-        --accent: #ff9f43;
-        --bg: #f8fafc;
+        --primary: #2e7d32;
+        --secondary: #ffb300;
+        --accent: #d32f2f;
+        --bg: #f4f7f6;
         --text: #1e293b;
         --card-bg: #ffffff;
     }
@@ -36,7 +36,7 @@
 
     /* HEADER */
     header {
-        background: rgba(255, 255, 255, 0.95);
+        background: rgba(255, 255, 255, 0.98);
         backdrop-filter: blur(10px);
         padding: 15px 5%;
         display: flex;
@@ -45,17 +45,16 @@
         position: sticky;
         top: 0;
         z-index: 100;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     }
 
     .logo {
-        font-size: 22px;
+        font-size: 20px;
         font-weight: 800;
         color: var(--primary);
         display: flex;
         align-items: center;
         gap: 8px;
-        letter-spacing: -0.5px;
     }
 
     .logo span { color: var(--secondary); }
@@ -73,10 +72,10 @@
         align-items: center;
         gap: 8px;
         transition: 0.3s;
-        box-shadow: 0 8px 15px rgba(0, 86, 179, 0.3);
+        box-shadow: 0 8px 15px rgba(46, 125, 50, 0.3);
     }
 
-    .cart-btn:hover { transform: scale(1.05); background: #004494; }
+    .cart-btn:hover { transform: scale(1.05); background: #1b5e20; }
 
     .cart-badge {
         background: var(--accent);
@@ -85,14 +84,13 @@
         padding: 2px 8px;
         font-size: 12px;
         font-weight: 800;
-        transition: 0.2s;
     }
 
-    /* HERO BANNER (GAMBAR ASLI) */
+    /* HERO BANNER */
     .hero-banner {
         width: 100%;
-        height: 200px;
-        background: url('https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=1000&auto=format&fit=crop') center/cover;
+        height: 220px;
+        background: url('https://images.unsplash.com/photo-1604719312566-8912e9227c6a?q=80&w=1000&auto=format&fit=crop') center/cover;
         position: relative;
         display: flex;
         align-items: center;
@@ -104,15 +102,13 @@
         animation: fadeUp 0.8s ease-out;
     }
 
-    @media (min-width: 768px) {
-        .hero-banner { height: 350px; }
-    }
+    @media (min-width: 768px) { .hero-banner { height: 350px; } }
 
     .hero-banner::before {
         content: '';
         position: absolute;
         top: 0; left: 0; width: 100%; height: 100%;
-        background: linear-gradient(to bottom, rgba(0,86,179,0.7), rgba(0,0,0,0.6));
+        background: linear-gradient(to right, rgba(27,94,32,0.85), rgba(0,0,0,0.6));
     }
 
     .hero-content {
@@ -123,32 +119,25 @@
     }
 
     .hero-content h1 {
-        font-size: 28px;
+        font-size: 26px;
         font-weight: 800;
         margin-bottom: 10px;
-        text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     }
 
-    @media (min-width: 768px) {
-        .hero-content h1 { font-size: 42px; }
-    }
+    @media (min-width: 768px) { .hero-content h1 { font-size: 40px; } }
 
-    .hero-content p {
-        font-size: 14px;
-        font-weight: 500;
-        margin-bottom: 15px;
-        opacity: 0.9;
-    }
+    .hero-content p { font-size: 14px; font-weight: 500; margin-bottom: 15px; }
 
     .hero-badge {
         display: inline-block;
-        background: var(--accent);
-        color: white;
+        background: var(--secondary);
+        color: #1b5e20;
         padding: 8px 20px;
         border-radius: 50px;
-        font-weight: 700;
-        font-size: 12px;
-        box-shadow: 0 10px 20px rgba(255,159,67,0.4);
+        font-weight: 800;
+        font-size: 13px;
+        box-shadow: 0 10px 20px rgba(255,179,0,0.4);
     }
 
     /* SEARCH & FILTER */
@@ -172,10 +161,8 @@
         transition: 0.3s;
     }
 
-    .search-box:focus-within { border-color: var(--secondary); }
-    .search-box input {
-        border: none; outline: none; width: 100%; font-size: 15px; margin-left: 10px;
-    }
+    .search-box:focus-within { border-color: var(--primary); }
+    .search-box input { border: none; outline: none; width: 100%; font-size: 15px; margin-left: 10px; }
 
     .categories {
         display: flex; gap: 10px; overflow-x: auto; padding: 0 20px 20px;
@@ -188,12 +175,11 @@
         background: white; color: var(--text); border: 1px solid #e2e8f0;
         padding: 10px 20px; border-radius: 50px; font-weight: 600; font-size: 13px;
         white-space: nowrap; cursor: pointer; transition: 0.3s;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.02);
     }
 
     .cat-btn.active {
         background: var(--primary); color: white; border-color: var(--primary);
-        box-shadow: 0 6px 15px rgba(0,86,179,0.3);
+        box-shadow: 0 6px 15px rgba(46,125,50,0.3);
     }
 
     /* CONTAINER */
@@ -218,7 +204,7 @@
 
     .product-card:hover {
         transform: translateY(-10px); box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-        border-color: var(--secondary);
+        border-color: var(--primary);
     }
 
     /* BADGE PRODUK */
@@ -226,88 +212,63 @@
         position: absolute; top: 15px; left: 15px; padding: 5px 12px;
         border-radius: 20px; font-size: 10px; font-weight: 800; color: white; z-index: 2;
     }
-    .badge.bestseller { background: #ff4757; }
+    .badge.bestseller { background: var(--primary); }
     .badge.promo { background: var(--accent); }
-    .badge.new { background: #2ed573; }
 
-    /* GAMBAR PRODUK (CSS MOCKUP) */
+    /* GAMBAR PRODUK */
     .img-container {
         height: 150px; display: flex; align-items: center; justify-content: center;
-        margin-bottom: 15px; position: relative;
-    }
-
-    @media (min-width: 768px) {
-        .img-container { height: 200px; }
-    }
-
-    /* BOX SUSU 3D */
-    .milk-box {
-        width: 70px; height: 110px; background: white; border-radius: 5px;
-        position: relative; display: flex; align-items: center; justify-content: center;
-        box-shadow: -10px 10px 20px rgba(0,0,0,0.15), inset -5px 0 10px rgba(0,0,0,0.05);
-        transition: transform 0.4s ease; border: 2px solid #e2e8f0;
+        margin-bottom: 10px; position: relative; background: #f8fafc; border-radius: 15px;
         overflow: hidden;
     }
 
-    @media (min-width: 768px) {
-        .milk-box { width: 90px; height: 140px; }
+    @media (min-width: 768px) { .img-container { height: 200px; } }
+
+    .img-container img {
+        width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;
     }
 
-    .milk-box::before {
-        content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 20%;
-        background: linear-gradient(to bottom, rgba(0,0,0,0.05), transparent);
-    }
-
-    .milk-box::after {
-        content: ''; position: absolute; bottom: 15%; right: -10px; width: 20px; height: 20px;
-        background: rgba(255,255,255,0.5); border-radius: 50%; filter: blur(2px);
-    }
-
-    .product-card:hover .milk-box { transform: scale(1.1) rotate(-5deg); }
-
-    .milk-box.original { background: linear-gradient(135deg, #ffffff, #e3f2fd); }
-    .milk-box.chocolate { background: linear-gradient(135deg, #8d6e63, #5d4037); }
-    .milk-box.strawberry { background: linear-gradient(135deg, #f48fb1, #c2185b); }
-    .milk-box.mocha { background: linear-gradient(135deg, #bcaaa4, #795548); }
-    .milk-box.vanilla { background: linear-gradient(135deg, #fff9c4, #fbc02d); }
-    .milk-box.lowfat { background: linear-gradient(135deg, #c8e6c9, #388e3c); }
-
-    .milk-label {
-        background: rgba(255,255,255,0.9); width: 100%; text-align: center;
-        padding: 5px 0; font-size: 8px; font-weight: 800; color: var(--primary);
-        text-transform: uppercase; transform: rotate(-90deg); letter-spacing: 1px;
-    }
-
-    @media (min-width: 768px) {
-        .milk-label { font-size: 10px; }
-    }
+    .product-card:hover .img-container img { transform: scale(1.1); }
 
     /* INFO PRODUK */
     .product-info { display: flex; flex-direction: column; flex-grow: 1; }
 
     .product-info h3 {
         font-size: 14px; font-weight: 700; color: var(--text); margin-bottom: 5px; line-height: 1.3;
-    }
-
-    @media (min-width: 768px) {
-        .product-info h3 { font-size: 16px; }
+        display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
     }
 
     .product-info .desc {
-        font-size: 11px; color: #64748b; margin-bottom: 12px; line-height: 1.4; flex-grow: 1;
+        font-size: 11px; color: #64748b; margin-bottom: 8px; line-height: 1.4; flex-grow: 1;
+        display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
     }
 
-    .price-row { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
-    .price { font-size: 16px; font-weight: 800; color: var(--primary); }
-
-    @media (min-width: 768px) {
-        .price { font-size: 18px; }
+    /* TOGGLE SATUAN (ECERAN / GROSIR) */
+    .variant-toggle {
+        display: flex; background: #f1f5f9; border-radius: 10px; padding: 4px; margin-bottom: 10px;
     }
 
-    .old-price { font-size: 11px; color: #cbd5e1; text-decoration: line-through; margin-left: 5px; }
+    .variant-btn {
+        flex: 1; border: none; background: transparent; padding: 6px 0; border-radius: 8px;
+        font-size: 11px; font-weight: 700; color: #64748b; cursor: pointer; transition: 0.3s;
+    }
+
+    .variant-btn.active {
+        background: white; color: var(--primary); box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .price-row { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 12px; flex-direction: column; }
+    
+    .price { font-size: 18px; font-weight: 800; color: var(--primary); }
+    
+    .price-detail {
+        font-size: 10px; color: #64748b; margin-top: 2px; font-weight: 500;
+    }
+
+    .satuan { font-size: 11px; color: #94a3b8; display: block; font-weight: 500; }
 
     .add-btn {
-        background: #eff6ff; color: var(--primary); border: none; padding: 10px;
+        background: #e8f5e9; color: var(--primary); border: none; padding: 10px;
         border-radius: 12px; font-weight: 700; font-size: 13px; cursor: pointer;
         transition: 0.3s; display: flex; align-items: center; justify-content: center; gap: 5px; width: 100%;
     }
@@ -320,9 +281,7 @@
         background: rgba(0,0,0,0.5); backdrop-filter: blur(5px); z-index: 999; align-items: flex-end;
     }
 
-    @media (min-width: 768px) {
-        .modal-overlay { align-items: center; justify-content: center; }
-    }
+    @media (min-width: 768px) { .modal-overlay { align-items: center; justify-content: center; } }
     .modal-overlay.active { display: flex; }
 
     .modal {
@@ -350,19 +309,29 @@
 
     .modal-body { padding: 20px; overflow-y: auto; flex: 1; }
 
+    /* BANNER ONGKIR */
+    .shipping-info {
+        background: #fff3e0; border: 1px solid #ffe0b2; padding: 12px; border-radius: 12px;
+        font-size: 12px; font-weight: 600; color: #e65100; margin-bottom: 15px;
+        display: flex; align-items: center; gap: 10px;
+    }
+    .shipping-info.success {
+        background: #e8f5e9; border-color: #c8e6c9; color: var(--primary);
+    }
+
     /* ITEM KERANJANG */
     .cart-item {
         display: flex; gap: 15px; background: white; padding: 15px;
         border-radius: 15px; margin-bottom: 15px; border: 1px solid #f1f5f9; align-items: center;
     }
 
-    .cart-item .mini-box {
-        width: 40px; height: 60px; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        display: flex; align-items: center; justify-content: center;
+    .cart-item img {
+        width: 50px; height: 50px; object-fit: cover; border-radius: 8px; background: #f8fafc;
     }
 
     .cart-item-info { flex: 1; }
-    .cart-item-info h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+    .cart-item-info h4 { font-size: 13px; font-weight: 700; color: var(--text); margin-bottom: 2px; }
+    .cart-item-info .variant-label { font-size: 10px; color: #64748b; background: #f1f5f9; padding: 2px 6px; border-radius: 4px; display: inline-block; margin-bottom: 4px;}
     .cart-item-info .item-price { font-size: 13px; font-weight: 800; color: var(--primary); }
 
     .qty-controls {
@@ -424,7 +393,7 @@
 <body>
 
 <header>
-    <div class="logo">🥛 ULTRA<span>MILK</span></div>
+    <div class="logo">🛒 BERKAH<span>GROSIR</span></div>
     <button class="cart-btn" onclick="openCart()">
         🛒 <span class="cart-badge" id="cartCount">0</span>
     </button>
@@ -432,23 +401,25 @@
 
 <section class="hero-banner">
     <div class="hero-content">
-        <h1>Susu Premium<br>Gaya Hidup Sehat</h1>
-        <p>100% Susu Sapi Segar Berkualitas Tinggi</p>
-        <div class="hero-badge">✨ Gratis Ongkir Min. 10 Pcs ✨</div>
+        <h1>Sembako Murah<br>Lengkap & Terpercaya</h1>
+        <p>Belanja kebutuhan dapur jadi lebih hemat</p>
+        <div class="hero-badge">🚚 GRATIS ONGKIR MIN. 5 BARANG</div>
     </div>
 </section>
 
 <div class="search-container">
     <div class="search-box">
         <span>🔍</span>
-        <input type="text" id="searchInput" placeholder="Cari varian susu favoritmu..." oninput="renderProducts()">
+        <input type="text" id="searchInput" placeholder="Cari beras, minyak, telur..." oninput="renderProducts()">
     </div>
 </div>
 
 <div class="categories" id="categoryList">
-    <button class="cat-btn active" onclick="filterCategory('semua', this)">Semua Varian</button>
-    <button class="cat-btn" onclick="filterCategory('250ml', this)">Kotak 250ml</button>
-    <button class="cat-btn" onclick="filterCategory('1L', this)">Kemasan 1 Liter</button>
+    <button class="cat-btn active" onclick="filterCategory('semua', this)">Semua Barang</button>
+    <button class="cat-btn" onclick="filterCategory('beras', this)">Beras & Tepung</button>
+    <button class="cat-btn" onclick="filterCategory('minyak', this)">Minyak & Gula</button>
+    <button class="cat-btn" onclick="filterCategory('telur', this)">Telur & Susu</button>
+    <button class="cat-btn" onclick="filterCategory('mie', this)">Mie & Kopi</button>
 </div>
 
 <div class="container">
@@ -459,10 +430,11 @@
 <div class="modal-overlay" id="cartModal">
     <div class="modal">
         <div class="modal-header">
-            <h2>🛒 Keranjang Belanja</h2>
+            <h2>🛒 Keranjang Grosir</h2>
             <button class="close-btn" onclick="closeCart()">✕</button>
         </div>
         <div class="modal-body">
+            <div id="shippingBanner"></div>
             <div id="cartItems"></div>
             
             <div id="orderForm" class="checkout-section" style="display:none;">
@@ -481,7 +453,7 @@
                 </div>
                 <div class="form-group">
                     <label>Catatan (Opsional)</label>
-                    <input type="text" id="customerNote" placeholder="Contoh: Kirim pagi hari">
+                    <input type="text" id="customerNote" placeholder="Contoh: Beras jangan yang keras">
                 </div>
             </div>
         </div>
@@ -502,88 +474,90 @@
 <div class="toast" id="toast">Berhasil!</div>
 
 <footer>
-    <p>&copy; 2024 Ultra Milk Store. All rights reserved.</p>
+    <p>&copy; 2024 Berkah Grosir. All rights reserved.</p>
 </footer>
 
 <script>
 // ================= KONFIGURASI =================
 const WHATSAPP_NUMBER = "6285772590983"; 
+const MIN_FREE_SHIPPING = 5; // Minimal total barang (qty) untuk gratis ongkir
 
-// ================= DATA PRODUK (PAKAI CSS MOCKUP) =================
+// ================= DATA PRODUK SEMBAKO (ECERAN & GROSIR) =================
 const products = [
     { 
         id: 1, 
-        name: "Ultra Milk Original 250ml", 
-        desc: "Susu murni segar tanpa rasa tambahan.", 
-        price: 6500, 
-        oldPrice: 7500,
-        category: "250ml",
+        name: "Beras Pandan Wangi", 
+        desc: "Beras pulen wangi khas Pandan Wangi.",
+        category: "beras",
         badge: "bestseller",
-        colorClass: "original"
+        // Data Eceran
+        eceran: { price: 15000, unit: "1 kg", img: "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=500&auto=format&fit=crop" },
+        // Data Grosir
+        grosir: { price: 72000, unit: "Karung 5 kg", img: "https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=500&auto=format&fit=crop" }
     },
     { 
         id: 2, 
-        name: "Ultra Milk Cokelat 250ml", 
-        desc: "Rasa cokelat premium yang disukai anak-anak.", 
-        price: 6800, 
-        category: "250ml",
+        name: "Minyak Goreng Sania", 
+        desc: "Minyak goreng kemasan pouch jernih & hemat.",
+        category: "minyak",
         badge: "promo",
-        colorClass: "chocolate"
+        eceran: { price: 18000, unit: "Pouch 1L", img: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?q=80&w=500&auto=format&fit=crop" },
+        grosir: { price: 34000, unit: "Pouch 2L", img: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?q=80&w=500&auto=format&fit=crop" }
     },
     { 
         id: 3, 
-        name: "Ultra Milk Stroberi 250ml", 
-        desc: "Manisnya stroberi asli berpadu dengan susu segar.", 
-        price: 6800, 
-        category: "250ml",
-        colorClass: "strawberry"
+        name: "Gula Pasir Gulaku", 
+        desc: "Gula tebu murni premium higienis.",
+        category: "minyak",
+        eceran: { price: 8500, unit: "Sachet 250g", img: "https://images.unsplash.com/photo-1581609043483-1c4c442b47d6?q=80&w=500&auto=format&fit=crop" },
+        grosir: { price: 16500, unit: "Bungkus 1kg", img: "https://images.unsplash.com/photo-1581609043483-1c4c442b47d6?q=80&w=500&auto=format&fit=crop" }
     },
     { 
         id: 4, 
-        name: "Ultra Milk Moka 250ml", 
-        desc: "Perpaduan kopi moka dan susu yang elegan.", 
-        price: 7000, 
-        category: "250ml",
-        colorClass: "mocha"
+        name: "Telur Ayam Negeri", 
+        desc: "Telur segar kualitas super (isi ±16 butir/kg).",
+        category: "telur",
+        badge: "bestseller",
+        eceran: { price: 2500, unit: "1 butir", img: "https://images.unsplash.com/photo-1506976785307-8732e854ad03?q=80&w=500&auto=format&fit=crop" },
+        grosir: { price: 28000, unit: "Tray / 1 kg", img: "https://images.unsplash.com/photo-1506976785307-8732e854ad03?q=80&w=500&auto=format&fit=crop" }
     },
     { 
         id: 5, 
-        name: "Ultra Milk Vanila 250ml", 
-        desc: "Aroma vanila lembut yang menenangkan.", 
-        price: 6800, 
-        category: "250ml",
-        badge: "new",
-        colorClass: "vanilla"
+        name: "Indomie Goreng", 
+        desc: "Mie instan goreng rasa Original mantap.",
+        category: "mie",
+        badge: "promo",
+        eceran: { price: 3200, unit: "1 Bungkus", img: "https://images.unsplash.com/photo-1612927601601-6638404737ce?q=80&w=500&auto=format&fit=crop" },
+        grosir: { price: 118000, unit: "1 Dus (40 pcs)", img: "https://images.unsplash.com/photo-1612927601601-6638404737ce?q=80&w=500&auto=format&fit=crop" }
     },
     { 
         id: 6, 
-        name: "Ultra Milk Low Fat 250ml", 
-        desc: "Rendah lemak, cocok untuk diet sehat.", 
-        price: 7200, 
-        category: "250ml",
-        colorClass: "lowfat"
+        name: "Tepung Terigu Segitiga Biru", 
+        desc: "Tepung serbaguna untuk gorengan & kue.",
+        category: "beras",
+        eceran: { price: 4000, unit: "Sachet 500g", img: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=500&auto=format&fit=crop" },
+        grosir: { price: 13500, unit: "Bungkus 1kg", img: "https://images.unsplash.com/photo-1509440159596-0249088772ff?q=80&w=500&auto=format&fit=crop" }
     },
     { 
         id: 7, 
-        name: "Ultra Milk Full Cream 1L", 
-        desc: "Kemasan besar, hemat untuk keluarga.", 
-        price: 19500, 
-        oldPrice: 22000,
-        category: "1L",
-        badge: "bestseller",
-        colorClass: "original"
+        name: "Susu Ultra Milk", 
+        desc: "Susu UHT Full Cream segar berkualitas.",
+        category: "telur",
+        badge: "new",
+        eceran: { price: 6000, unit: "1 Kotak 250ml", img: "https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=500&auto=format&fit=crop" },
+        grosir: { price: 210000, unit: "Karton (12x1L)", img: "https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=500&auto=format&fit=crop" }
     },
     { 
         id: 8, 
-        name: "Ultra Milk Cokelat 1L", 
-        desc: "Cokelat melimpah dalam kemasan 1 liter.", 
-        price: 21000, 
-        category: "1L",
-        colorClass: "chocolate"
+        name: "Kopi Kapal Api Special", 
+        desc: "Kopi bubuk robusta mantap pengusir ngantuk.",
+        category: "mie",
+        eceran: { price: 2000, unit: "Sachet", img: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=500&auto=format&fit=crop" },
+        grosir: { price: 14000, unit: "Bungkus 165g", img: "https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=500&auto=format&fit=crop" }
     },
 ];
 
-let cart = JSON.parse(localStorage.getItem('ultraCartV3')) || [];
+let cart = JSON.parse(localStorage.getItem('grosirCartV2')) || [];
 let currentCategory = 'semua';
 
 // ================= RENDER PRODUK =================
@@ -598,35 +572,41 @@ function renderProducts() {
     });
 
     if (filtered.length === 0) {
-        list.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding:40px; color:#94a3b8;">Produk tidak ditemukan 😔</div>`;
+        list.innerHTML = `<div style="grid-column: 1/-1; text-align:center; padding:40px; color:#94a3b8;">Barang tidak ditemukan 😔</div>`;
         return;
     }
 
     list.innerHTML = filtered.map((p, index) => {
         let badgeHtml = '';
-        if (p.badge === 'bestseller') badgeHtml = '<div class="badge bestseller">🔥 BEST SELLER</div>';
+        if (p.badge === 'bestseller') badgeHtml = '<div class="badge bestseller">🔥 TERLARIS</div>';
         if (p.badge === 'promo') badgeHtml = '<div class="badge promo">⚡ PROMO</div>';
-        if (p.badge === 'new') badgeHtml = '<div class="badge new">✨ BARU</div>';
+        if (p.badge === 'new') badgeHtml = '<div class="badge new" style="background:#0288d1">✨ BARU</div>';
 
-        let oldPriceHtml = p.oldPrice ? `<span class="old-price">Rp ${p.oldPrice.toLocaleString('id-ID')}</span>` : '';
+        // Emoji fallback jika gambar error
+        let fallbackEmoji = '📦';
+        if (p.category === 'beras') fallbackEmoji = '🍚';
+        if (p.category === 'minyak') fallbackEmoji = '🛢️';
+        if (p.category === 'telur') fallbackEmoji = '🥚';
+        if (p.category === 'mie') fallbackEmoji = '🍜';
 
         return `
         <div class="product-card" style="animation-delay: ${index * 0.05}s">
             ${badgeHtml}
-            <div class="img-container">
-                <!-- Ini Gambar Kotak Susu Pakai CSS, Dijamin Muncul! -->
-                <div class="milk-box ${p.colorClass}">
-                    <div class="milk-label">ULTRA MILK</div>
-                </div>
+            <div class="img-container" id="img-container-${p.id}">
+                <!-- Gambar akan di-render via JS -->
             </div>
             <div class="product-info">
                 <h3>${p.name}</h3>
                 <p class="desc">${p.desc}</p>
-                <div class="price-row">
-                    <div>
-                        <span class="price">Rp ${p.price.toLocaleString('id-ID')}</span>
-                        ${oldPriceHtml}
-                    </div>
+                
+                <!-- TOMBOL TOGGLE ECERAN / GROSIR -->
+                <div class="variant-toggle">
+                    <button class="variant-btn active" id="btn-eceran-${p.id}" onclick="switchVariant(${p.id}, 'eceran')">Eceran</button>
+                    <button class="variant-btn" id="btn-grosir-${p.id}" onclick="switchVariant(${p.id}, 'grosir')">Grosir</button>
+                </div>
+
+                <div class="price-row" id="price-row-${p.id}">
+                    <!-- Harga akan di-render via JS -->
                 </div>
                 <button class="add-btn" onclick="addToCart(${p.id})">
                     <span>+</span> Tambah
@@ -635,6 +615,37 @@ function renderProducts() {
         </div>
         `;
     }).join('');
+
+    // Set default state ke Eceran setelah render
+    filtered.forEach(p => switchVariant(p.id, 'eceran'));
+}
+
+// ================= LOGIKA TOGGLE VARIAN =================
+function switchVariant(id, type) {
+    const product = products.find(p => p.id === id);
+    if (!product) return;
+
+    // Update tombol
+    document.getElementById(`btn-eceran-${id}`).classList.toggle('active', type === 'eceran');
+    document.getElementById(`btn-grosir-${id}`).classList.toggle('active', type === 'grosir');
+
+    // Ambil data sesuai tipe
+    const data = type === 'eceran' ? product.eceran : product.grosir;
+
+    // Update Gambar
+    const imgContainer = document.getElementById(`img-container-${id}`);
+    imgContainer.innerHTML = `<img src="${data.img}" alt="${product.name}" loading="lazy" 
+        onerror="this.style.display='none'; this.parentElement.innerHTML='<span style=\\'font-size:50px;\\'>${product.category === 'beras' ? '🍚' : product.category === 'minyak' ? '🛢️' : product.category === 'telur' ? '🥚' : '🍜'}</span>';">`;
+
+    // Update Harga
+    const priceRow = document.getElementById(`price-row-${id}`);
+    priceRow.innerHTML = `
+        <span class="price">Rp ${data.price.toLocaleString('id-ID')}</span>
+        <span class="price-detail">Per ${data.unit}</span>
+    `;
+
+    // Simpan state tipe varian yang dipilih ke dalam DOM (buat dipake pas addToCart)
+    document.querySelector(`#btn-eceran-${id}`).closest('.product-card').dataset.selectedVariant = type;
 }
 
 // ================= FILTER KATEGORI =================
@@ -648,21 +659,41 @@ function filterCategory(cat, btn) {
 // ================= LOGIKA KERANJANG =================
 function addToCart(id) {
     const product = products.find(p => p.id === id);
-    const existing = cart.find(item => item.id === id);
+    const card = document.querySelector(`#btn-eceran-${id}`).closest('.product-card');
+    const selectedVariant = card.dataset.selectedVariant || 'eceran';
+    
+    // Ambil data sesuai varian yang dipilih
+    const variantData = product[selectedVariant];
+    
+    // ID unik di keranjang berdasarkan ID produk + varian (misal: 1-eceran)
+    const cartItemId = `${product.id}-${selectedVariant}`;
+
+    const existing = cart.find(item => item.cartItemId === cartItemId);
 
     if (existing) {
         existing.qty += 1;
     } else {
-        cart.push({ ...product, qty: 1 });
+        cart.push({ 
+            cartItemId: cartItemId,
+            id: product.id,
+            name: product.name,
+            variant: selectedVariant,
+            unit: variantData.unit,
+            price: variantData.price,
+            img: variantData.img,
+            qty: 1 
+        });
     }
 
     saveCart();
     updateCartCount();
-    showToast(`✅ ${product.name} masuk keranjang!`);
+    
+    const labelVariant = selectedVariant === 'eceran' ? 'Eceran' : 'Grosir';
+    showToast(`✅ ${product.name} (${labelVariant}) masuk keranjang!`);
 }
 
 function saveCart() {
-    localStorage.setItem('ultraCartV3', JSON.stringify(cart));
+    localStorage.setItem('grosirCartV2', JSON.stringify(cart));
 }
 
 function updateCartCount() {
@@ -678,34 +709,64 @@ function renderCart() {
     const orderForm = document.getElementById('orderForm');
     const modalFooter = document.getElementById('modalFooter');
     const totalPriceEl = document.getElementById('totalPrice');
+    const shippingBanner = document.getElementById('shippingBanner');
 
     if (cart.length === 0) {
         cartItems.innerHTML = `
             <div class="empty-cart">
                 <div style="font-size:50px; margin-bottom:10px;">🛒</div>
                 <h3>Keranjang masih kosong</h3>
-                <p style="font-size:12px; margin-top:5px;">Yuk pilih susu favoritmu!</p>
+                <p style="font-size:12px; margin-top:5px;">Yuk pilih sembako murah!</p>
             </div>
         `;
         orderForm.style.display = 'none';
         modalFooter.style.display = 'none';
+        shippingBanner.innerHTML = '';
         return;
     }
 
-    cartItems.innerHTML = cart.map(item => `
+    // Hitung total QTY untuk syarat gratis ongkir
+    const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+    
+    // Logika Banner Gratis Ongkir
+    if (totalQty >= MIN_FREE_SHIPPING) {
+        shippingBanner.innerHTML = `
+            <div class="shipping-info success">
+                <span>🚚</span> Selamat! Pesanan Anda dapat <b>GRATIS ONGKIR</b>.
+            </div>
+        `;
+    } else {
+        const sisa = MIN_FREE_SHIPPING - totalQty;
+        shippingBanner.innerHTML = `
+            <div class="shipping-info">
+                <span>🛍️</span> Beli <b>${sisa} barang lagi</b> untuk dapat GRATIS ONGKIR!
+            </div>
+        `;
+    }
+
+    cartItems.innerHTML = cart.map(item => {
+        let fallbackEmoji = '📦';
+        if (item.name.includes('Beras')) fallbackEmoji = '🍚';
+        if (item.name.includes('Minyak')) fallbackEmoji = '🛢️';
+        if (item.name.includes('Telur')) fallbackEmoji = '🥚';
+        if (item.name.includes('Indomie')) fallbackEmoji = '🍜';
+
+        return `
         <div class="cart-item">
-            <div class="mini-box ${item.colorClass}" style="padding:2px; text-align:center; font-size:6px; font-weight:800; color:var(--primary);">ULTRA</div>
+            <img src="${item.img}" alt="${item.name}" onerror="this.src='https://via.placeholder.com/50?text=${fallbackEmoji}'">
             <div class="cart-item-info">
                 <h4>${item.name}</h4>
+                <span class="variant-label">${item.variant === 'eceran' ? 'Eceran' : 'Grosir'} - ${item.unit}</span>
                 <div class="item-price">Rp ${item.price.toLocaleString('id-ID')}</div>
             </div>
             <div class="qty-controls">
-                <button class="qty-btn" onclick="changeQty(${item.id}, -1)">−</button>
+                <button class="qty-btn" onclick="changeQty('${item.cartItemId}', -1)">−</button>
                 <span class="qty-num">${item.qty}</span>
-                <button class="qty-btn" onclick="changeQty(${item.id}, 1)">+</button>
+                <button class="qty-btn" onclick="changeQty('${item.cartItemId}', 1)">+</button>
             </div>
         </div>
-    `).join('');
+        `;
+    }).join('');
 
     orderForm.style.display = 'block';
     modalFooter.style.display = 'block';
@@ -714,13 +775,13 @@ function renderCart() {
     totalPriceEl.textContent = `Rp ${total.toLocaleString('id-ID')}`;
 }
 
-function changeQty(id, delta) {
-    const item = cart.find(i => i.id === id);
+function changeQty(cartItemId, delta) {
+    const item = cart.find(i => i.cartItemId === cartItemId);
     if (!item) return;
 
     item.qty += delta;
     if (item.qty <= 0) {
-        cart = cart.filter(i => i.id !== id);
+        cart = cart.filter(i => i.cartItemId !== cartItemId);
     }
     saveCart();
     updateCartCount();
@@ -756,10 +817,11 @@ function checkoutWA() {
     }
 
     const total = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
-    const orderId = 'UM-' + Date.now().toString().slice(-6);
+    const totalQty = cart.reduce((sum, item) => sum + item.qty, 0);
+    const orderId = 'BG-' + Date.now().toString().slice(-6);
     const date = new Date().toLocaleString('id-ID', { dateStyle: 'long', timeStyle: 'short' });
 
-    let message = `*🛒 PESANAN BARU - ULTRA MILK STORE*%0A`;
+    let message = `*🛒 PESANAN BARU - BERKAH GROSIR*%0A`;
     message += `━━━━━━━━━━━━━━━━━━━━%0A`;
     message += `*Order ID:* ${orderId}%0A`;
     message += `*Tanggal:* ${date}%0A`;
@@ -773,11 +835,20 @@ function checkoutWA() {
     message += `*📦 DETAIL PESANAN:*%0A`;
 
     cart.forEach((item, i) => {
-        message += `${i + 1}. ${item.name}%0A`;
-        message += `   ${item.qty} pcs × Rp ${item.price.toLocaleString('id-ID')} = *Rp ${(item.price * item.qty).toLocaleString('id-ID')}*%0A`;
+        message += `${i + 1}. ${item.name} (${item.variant === 'eceran' ? 'Eceran' : 'Grosir'})%0A`;
+        message += `   ${item.qty} x Rp ${item.price.toLocaleString('id-ID')} = *Rp ${(item.price * item.qty).toLocaleString('id-ID')}*%0A`;
     });
 
     message += `━━━━━━━━━━━━━━━━━━━━%0A`;
+    message += `*Total Barang:* ${totalQty} pcs%0A`;
+    
+    // Info Ongkir di WA
+    if (totalQty >= MIN_FREE_SHIPPING) {
+        message += `*Ongkir:* GRATIS (Min. 5 Barang)%0A`;
+    } else {
+        message += `*Ongkir:* Belum memenuhi syarat gratis ongkir%0A`;
+    }
+
     message += `*💰 TOTAL BAYAR: Rp ${total.toLocaleString('id-ID')}*%0A`;
     message += `━━━━━━━━━━━━━━━━━━━━%0A`;
     message += `Mohon konfirmasi pesanan saya ya kak. Terima kasih! 🙏`;
@@ -808,6 +879,7 @@ function showToast(msg) {
     toastTimeout = setTimeout(() => toast.classList.remove('show'), 3000);
 }
 
+// Mulai render
 renderProducts();
 updateCartCount();
 </script>
